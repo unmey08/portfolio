@@ -1,7 +1,7 @@
 import Home from './Home';
 import About from './About';
-import Experience from './Experience';
 import Projects from './Projects';
 import Contact from './Contact';
+import Resume from './Resume';
 
-export { Home, About, Experience, Projects, Contact }
+export { Home, About, Projects, Contact, Resume }
