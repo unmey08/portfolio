@@ -1,10 +1,21 @@
-import React from 'react'
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { Home, About, Experience, Projects, Contact } from './pages';
 
 const App = () => {
     return (
-        <h1 className="text-3xl font-bold underline">
-            Hello world!
-        </h1>
+        <main>
+            <Router>
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/experience" element={<Experience />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/projects" element={<Projects />} />
+                </Routes>
+            </Router>
+        </main>
     )
 }
 
