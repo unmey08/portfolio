@@ -5,9 +5,11 @@ import Loader from '../components/Loader';
 import Island from "../models/Island";
 import HomeInfo from "../components/HomeInfo";
 
+
 const Home = () => {
     const [isRotating, setIsRotating] = useState(false);
     const [currentStage, setCurrentStage] = useState(1);
+
     const adjustIslandForScreenSize = () => {
         let screenScale;
         // let screenPosition = [0, -6.5, -43];
