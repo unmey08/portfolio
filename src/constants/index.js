@@ -1,6 +1,6 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { adp, egen, agm } from "../assets/images";
 import {
-    car,
+    bitbucket,
     contact,
     css,
     estate,
@@ -9,160 +9,163 @@ import {
     github,
     html,
     javascript,
+    jira,
     linkedin,
     mongodb,
-    motion,
-    mui,
     nextjs,
     nodejs,
-    pricewise,
+    postgres,
     react,
     redux,
     sass,
-    snapgram,
-    summiz,
     tailwindcss,
-    threads,
+    chess,
     typescript
 } from "../assets/icons";
 
 export const skills = [
     {
+        imageUrl: bitbucket,
+        name: "Bitbucket",
+        type: "Version Control",
+        hover: false
+    },
+    {
         imageUrl: css,
         name: "CSS",
         type: "Frontend",
+        hover: false
     },
     {
         imageUrl: express,
         name: "Express",
         type: "Backend",
+        hover: false
     },
     {
         imageUrl: git,
         name: "Git",
         type: "Version Control",
+        hover: false
     },
     {
         imageUrl: github,
         name: "GitHub",
         type: "Version Control",
+        hover: false
     },
     {
         imageUrl: html,
         name: "HTML",
         type: "Frontend",
+        hover: false
     },
     {
         imageUrl: javascript,
         name: "JavaScript",
         type: "Frontend",
+        hover: false
+    },
+    {
+        imageUrl: jira,
+        name: "Jira",
+        type: "Agile",
+        hover: false
     },
     {
         imageUrl: mongodb,
         name: "MongoDB",
         type: "Database",
-    },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
+        hover: false
     },
     {
         imageUrl: nextjs,
         name: "Next.js",
         type: "Frontend",
+        hover: false
     },
     {
         imageUrl: nodejs,
         name: "Node.js",
         type: "Backend",
+        hover: false
+    },
+    {
+        imageUrl: postgres,
+        name: "PostgreSQL",
+        type: "Backend",
+        hover: false
     },
     {
         imageUrl: react,
         name: "React",
         type: "Frontend",
+        hover: false
     },
     {
         imageUrl: redux,
         name: "Redux",
         type: "State Management",
+        hover: false
     },
     {
         imageUrl: sass,
         name: "Sass",
         type: "Frontend",
+        hover: false
     },
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
         type: "Frontend",
+        hover: false
     },
     {
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
+        hover: false
     }
 ];
 
 export const experiences = [
     {
         title: "Senior Member Technical",
-        company_name: "ADP",
-        icon: starbucks,
-        iconBg: "#accbe1",
+        company_name: "ADP | Pune, India",
+        icon: adp,
+        iconBg: "#fbc3bc",
         date: "March 2022 - Present",
         points: [
-            "Developed Benefits Assist chatbot leveraging LLM to deliver intelligent and personalized responses to employee inquiries, improving user experience and reducing HR support workload by 30%.",
-            "Spearheaded the frontend development integration of Gen AI models into the Plan Setup page, resulting in a 70% reduction in plan submission time by providing real - time suggestions during plan creation.",
-            "–	Overhauled the user experience of the Launchpad web application by implementing a custom design system built with ReactJS, Redux, and TypeScript.This improved application load speeds by 25 % and fostered a cohesive user experience.",
+            "Integrated Benefits Assist MFE chatbot leveraging LLM to deliver intelligent and personalized responses to employee inquiries.",
+            "Spearheaded the frontend development integration of Gen AI models into the Plan Setup page.",
+            "Overhauled the user experience of the Launchpad web application by implementing a custom design system built with ReactJS, Redux, and TypeScript.",
             "Collaborated closely with the Product Managers and UX Designers to continuously introduce new features and ensure the application’s evolution aligns with changing user needs",
-            "–	Initiated automated daily regression testing using Java and Selenium, reducing testing time by 30% and improving code."
+            "Initiated automated daily regression testing using Java and Selenium, reducing testing time by 30% and improving code."
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
+        title: "Senior Application Developer",
+        company_name: "AGM Tech Solutions - on Contract at ADP  | Parsippany, New Jersey",
+        icon: agm,
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "July 2020 - February 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Architected a data extraction & auto-population solution for Benefits documents with custom insights & a PDF viewer for highlighting source data",
+            "Mentored a 3-person frontend team using React JS, Redux, and TypeScript to digitize Plan Summary pages, enabling automated Summary of Benefits & Coverage document processing",
+            "Engineered a React JS and Redux PDF annotation tool for 20 consultants, streamlining data extraction from 1600+ insurance documents, and improving machine learning model training accuracy to 93%."
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        title: "Application Developer",
+        company_name: "Egen Solutions - on Contract at ADP | Parsippany, New Jersey",
+        icon: egen,
+        iconBg: "#accbe1",
+        date: "January 2020 - June 2020",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Created accessible, responsive React JS components for Workforce Now Launchpad Benefits pages, enabling implementation consultants to craft insurance plans for smaller businesses with an average employee size of 40.",
+            "Actively engaged in the full SDLC, from analysis and design to development, integration, and testing."
         ],
-    },
+    }
 ];
 
 export const socialLinks = [
@@ -174,56 +177,30 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/unmey08',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/unmey',
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
-    },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
         iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        theme: 'btn-back-red',
+        name: 'Propulse',
+        description: 'Created a full-fledged property rental full-stack web application using Next.js, Tailwind and MongoDB',
+        githubLink: 'https://github.com/unmey08/propulse-property-finder',
+        link: ''
     },
     {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        iconUrl: chess,
+        theme: 'btn-back-green',
+        name: 'Chess.com Clone',
+        description: 'Developed a Chess.com clone using NodeJS, ChessJS and EJS',
+        githubLink: 'https://github.com/unmey08/chesscom-clone',
+        link: ''
     }
 ];

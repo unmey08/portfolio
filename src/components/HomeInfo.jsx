@@ -18,7 +18,7 @@ const HomeInfo = ({ currentStage }) => {
         return (
             <div className='info-box'>
                 <p className='font-medium sm:text-xl text-center'>
-                    Checkout my skills
+                    Worked for multiple companies across India and United States
                 </p>
 
                 <Link to='/about' className='neo-brutalism-white neo-btn'>
@@ -33,7 +33,7 @@ const HomeInfo = ({ currentStage }) => {
         return (
             <div className='info-box'>
                 <p className='font-medium text-center sm:text-xl'>
-                    Worked on multiple projects at my previous companies
+                    Worked on multiple projects to hone my skills!
                 </p>
 
                 <Link to='/projects' className='neo-brutalism-white neo-btn'>

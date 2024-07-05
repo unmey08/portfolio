@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
+import { Loader } from '@react-three/drei';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -17,11 +18,15 @@ const Resume = () => {
     const onDocumentLoadSuccess = ({ numPages }) => {
         setNumPages(numPages)
     }
+
+    const showLoader = () => {
+        return (<Loader />);
+    }
     return (
         <div className='max-container'>
             <div className='flex justify-center items-center flex-col'>
                 <Link to={pdfFile} target="_blank" className="btn" download>Download Resume</Link>
-                <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess} className="my-4 border-2 block-container rounded-lg">
+                <Document file={pdfFile} onLoadSuccess={onDocumentLoadSuccess} onLoadProgress={showLoader} className="my-4 border-2 block-container rounded-md border-cyan-500  border-4 hover:border-white">
                     <Page pageNumber={1} width={800} />
                 </Document>
             </div>

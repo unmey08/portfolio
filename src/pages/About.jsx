@@ -1,10 +1,13 @@
-import React from 'react'
 import { skills, experiences } from '../constants'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { CTA } from '../components'
 
 const About = () => {
+    const handleMouseOver = (skill) => {
+        skill.hover = true;
+        return skill; 
+    }
     return (
         <section className='max-container'>
             <h1 className='head-text'>
@@ -12,7 +15,7 @@ const About = () => {
             </h1>
             <div className='mt-5 flex flex-col gap-3 text-slate-500'>
                 <p>
-                    Frontend Software Engineer in Canada with 5+ years of experience building impactful web applications across borders in an Agile framework. Expertise in React, Redux, and JavaScript frameworks to create user-centric and efficient UIs.
+                    Full-stack Engineer in Canada with 5+ years of experience building impactful web applications across borders in an Agile framework. Expertise in React, Redux, and TypeScript to create user-centric and efficient UIs.
                 </p>
             </div>
 
@@ -21,7 +24,7 @@ const About = () => {
                 <div className='mt-16 flex flex-wrap gap-12'>
                     {skills.map((skill, index) => {
                         return (
-                            <div className='block-container w-20 h-20'>
+                            <div className='block-container w-20 h-20' onMouseOver={() => handleMouseOver(skill)} key={skill.name}>
                                 <div className='btn-back rounded-xl' />
                                 <div className='btn-front rounded-xl flex justify-center items-center'>
                                     <img src={skill.imageUrl} alt={skill.name} className='w-1/2 h-1/2 object-contain'
@@ -44,7 +47,7 @@ const About = () => {
                         {experiences.map((experience) => (
                             <VerticalTimelineElement key={experience.company_name} date={experience.date}
                                 icon={<div className='flex justify-center items-center w-full h-full'>
-                                    <img src={experience.icon} alt={experience.company_name} className='w-[60%] h-[60%] object-contain' />
+                                    <img src={experience.icon} alt={experience.company_name} className='w-[90%] h-[90%] object-contain' />
                                 </div>}
                                 iconStyle={{ background: experience.iconBg }}
                                 contentStyle={{
