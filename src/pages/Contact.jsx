@@ -20,6 +20,7 @@ const Contact = () => {
     const { alert, showAlert, hideAlert } = useAlert();
     const [loading, setLoading] = useState(false);
     const [currentAnimation, setCurrentAnimation] = useState("idle");
+    const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     const handleChange = ({ target: { name, value } }) => {
         setForm({ ...form, [name]: value });
@@ -79,23 +80,23 @@ const Contact = () => {
     };
 
     return (
-        <section className='relative flex lg:flex-row flex-col max-container'>
+        <section className='relative flex lg:flex-row flex-col max-container h-screen dark:h-screen'>
             {alert.show && <Alert {...alert} />}
 
             <div className='flex-1 min-w-[50%] flex flex-col'>
-                <h1 className='head-text'>Get in Touch</h1>
+                <h1 className='head-text dark:text-white'>Get in Touch</h1>
 
                 <form
                     ref={formRef}
                     onSubmit={handleSubmit}
                     className='w-full flex flex-col gap-7 mt-14'
                 >
-                    <label className='text-black-500 font-semibold'>
+                    <label className='text-black-500 dark:text-slate-400 font-semibold'>
                         Name
                         <input
                             type='text'
                             name='name'
-                            className='input'
+                            className={darkMode ? 'dark-input' : 'input'}
                             placeholder='John'
                             required
                             value={form.name}
@@ -104,12 +105,12 @@ const Contact = () => {
                             onBlur={handleBlur}
                         />
                     </label>
-                    <label className='text-black-500 font-semibold'>
+                    <label className='text-black-500 dark:text-slate-400 font-semibold'>
                         Email
                         <input
                             type='email'
                             name='email'
-                            className='input'
+                            className={darkMode ? 'dark-input' : 'input'}
                             placeholder='John@gmail.com'
                             required
                             value={form.email}
@@ -118,12 +119,12 @@ const Contact = () => {
                             onBlur={handleBlur}
                         />
                     </label>
-                    <label className='text-black-500 font-semibold'>
+                    <label className='text-black-500 dark:text-slate-400 font-semibold'>
                         Your Message
                         <textarea
                             name='message'
                             rows='4'
-                            className='textarea'
+                            className={darkMode ? 'dark-textarea' : 'textarea'}
                             placeholder='Write your thoughts here...'
                             value={form.message}
                             onChange={handleChange}
@@ -142,6 +143,11 @@ const Contact = () => {
                         {loading ? "Sending..." : "Submit"}
                     </button>
                 </form>
+
+                <div className="text-center text-black-500 dark:text-slate-400">
+                    <p className="text-2xl font-bold mt-5">OR</p>
+                    <p className="mt-5">You can reach out to me at <a href="mailto:unmey08@gmail.com" className="text-blue-500 hover:underline">unmey08@gmail.com</a></p>
+                </div>
             </div>
 
             <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>

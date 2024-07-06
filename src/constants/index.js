@@ -134,7 +134,8 @@ export const experiences = [
         company_name: "ADP | Pune, India",
         icon: adp,
         iconBg: "#fbc3bc",
-        date: "March 2022 - Present",
+        iconDarkBg: "#262626",
+        date: "March 2022 - August 2024",
         points: [
             "Integrated Benefits Assist MFE chatbot leveraging LLM to deliver intelligent and personalized responses to employee inquiries.",
             "Spearheaded the frontend development integration of Gen AI models into the Plan Setup page.",
@@ -148,6 +149,7 @@ export const experiences = [
         company_name: "AGM Tech Solutions - on Contract at ADP  | Parsippany, New Jersey",
         icon: agm,
         iconBg: "#b7e4c7",
+        iconDarkBg: "#262626",
         date: "July 2020 - February 2022",
         points: [
             "Architected a data extraction & auto-population solution for Benefits documents with custom insights & a PDF viewer for highlighting source data",
@@ -160,6 +162,7 @@ export const experiences = [
         company_name: "Egen Solutions - on Contract at ADP | Parsippany, New Jersey",
         icon: egen,
         iconBg: "#accbe1",
+        iconDarkBg: "#262626",
         date: "January 2020 - June 2020",
         points: [
             "Created accessible, responsive React JS components for Workforce Now Launchpad Benefits pages, enabling implementation consultants to craft insurance plans for smaller businesses with an average employee size of 40.",
@@ -191,7 +194,7 @@ export const projects = [
         iconUrl: estate,
         theme: 'btn-back-red',
         name: 'Propulse',
-        description: 'Created a full-fledged property rental full-stack web application using Next.js, Tailwind and MongoDB',
+        description: 'Created a  property rental full-stack web application using Next.js, Tailwind and MongoDB',
         githubLink: 'https://github.com/unmey08/propulse-property-finder',
         link: ''
     },
@@ -199,8 +202,26 @@ export const projects = [
         iconUrl: chess,
         theme: 'btn-back-green',
         name: 'Chess.com Clone',
-        description: 'Developed a Chess.com clone using NodeJS, ChessJS and EJS',
+        description: 'Developed a two-player Chess.com clone using NodeJS, ChessJS, Web sockets and EJS.',
         githubLink: 'https://github.com/unmey08/chesscom-clone',
         link: ''
     }
 ];
+
+export const options = [
+    {
+        icon: 'sunny',
+        text: 'light',
+        id: 1
+    },
+    {
+        icon: 'moon',
+        text: 'dark',
+        id: 2
+    },
+    {
+        icon: 'desktop-outline',
+        text: 'system',
+        id: 3
+    }
+]

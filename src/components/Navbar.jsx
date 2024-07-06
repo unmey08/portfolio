@@ -1,45 +1,70 @@
 import { NavLink } from 'react-router-dom'
-import cinematicAudio from '../assets/audio/peaceful-cinematic.mp3'
-import { soundoff, soundon } from '../assets/icons';
-import { useState, useEffect, useRef } from 'react'
+import {useState} from 'react';
+import {logo} from '../assets/images'
 
 const Navbar = () => {
-    const [isAudioPlaying, setIsAudioPlaying] = useState(false);
-    const audioRef = useRef(new Audio(cinematicAudio));
-    audioRef.current.volume = 0.4;
-    audioRef.current.loop = true;
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    useEffect(() => {
-        if(isAudioPlaying) {
-            audioRef.current.play();
+    const openMenu = () => {
+        setIsMenuOpen(value => !value);
+    }
+
+    const setMenuClasses = () => {
+        if(isMenuOpen) {
+            return 'w-screen h-screen opacity-80'
         }
         else {
-            audioRef.current.pause();
+            return 'w-0 h-0 opacity-0'
         }
-    }, [isAudioPlaying]);
+    }
+
     return (
-        <header className='header'>
-            <NavLink to="/" className="w-10 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md">
-                <p className='blue-gradient_text'>UM</p>
-            </NavLink>
-            <nav className='flex text-lg gap-7 font-medium'>
-                <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
-                    About
+        <div>
+            <header className='header'>
+                <NavLink to="/" className="hidden md:block w-20 h-20">
+                    <img src={logo} className='blue-gradient_text'/>
                 </NavLink>
-                <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
-                    Projects
-                </NavLink>
-                <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
-                    Contact Me
-                </NavLink>
-                <NavLink to="/resume" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black'}>
-                    Resume
-                </NavLink>
-                <div>
-                <img src={isAudioPlaying ? soundon : soundoff} className='mt-1 w-5 h-5 cursor-pointer object-contain' alt='sound' onClick={() => setIsAudioPlaying(!isAudioPlaying)}/>
-            </div>
-            </nav>
-        </header>
+                <nav className='text-lg gap-7 font-medium hidden md:flex'>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-gray-400 duration-500'}>
+                        About
+                    </NavLink>
+                    <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-gray-400 duration-500'}>
+                        Projects
+                    </NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-gray-400 duration-500'}>
+                        Contact Me
+                    </NavLink>
+                    <NavLink to="/resume" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-gray-400 duration-500'}>
+                        Resume
+                    </NavLink>
+                </nav>
+                <div className='block md:hidden'>
+                    {!isMenuOpen && <button className='text-3xl text-white duration-700 transition' onClick={openMenu}><ion-icon name="menu-outline"></ion-icon></button>}
+                    {isMenuOpen && <button className='text-3xl text-white duration-700 transition' onClick={openMenu}><ion-icon name="close-outline"></ion-icon></button>}
+                </div>
+            </header>
+            {isMenuOpen &&
+                <div className={`z-90 ${setMenuClasses()} transition flex justify-center items-center bg-blue-500 dark:bg-neutral-700 duration-700 dark:opacity-95 ease-in-out`}>
+                    <ul className='text-white text-3xl'>
+                        <NavLink to="/" className={({ isActive }) => isActive ? 'text-black uppercase my-12' : 'text-black dark:text-white transition ease-out duration-500 block uppercase mb-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
+                        Home
+                        </NavLink>
+                        <NavLink to="/about" className={({ isActive }) => isActive ? 'text-black uppercase my-12' : 'text-black dark:text-white transition ease-out  duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
+                        About
+                        </NavLink>
+                        <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-black uppercase my-12' : 'text-black dark:text-white transition ease-out  duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
+                            Projects
+                        </NavLink>
+                        <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-black uppercase my-12' : 'text-black dark:text-white transition ease-out duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
+                            Contact Me
+                        </NavLink>
+                        <NavLink to="/resume" className={({ isActive }) => isActive ? 'text-black uppercase my-12' : 'text-black dark:text-white transition ease-out  duration-500 block uppercase mt-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
+                            Resume
+                        </NavLink>
+                    </ul>
+                </div>
+            }
+        </div>
     )
 }
 

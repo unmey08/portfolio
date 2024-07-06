@@ -6,16 +6,17 @@ import { arrow } from "../assets/icons";
 import { socialLinks } from "../constants";
 
 const Projects = () => {
+    const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     return (
-        <section className='max-container'>
-            <h1 className='head-text'>
+        <section className='max-container h-full dark:h-full'>
+            <h1 className='head-text dark:text-white'>
                 My{" "}
                 <span className='blue-gradient_text drop-shadow font-semibold'>
                     Projects
                 </span>
             </h1>
 
-            <p className='text-slate-500 mt-2 leading-relaxed'>
+            <p className='text-slate-500 mt-2 leading-relaxed dark:text-gray-200'>
                 I have worked on a number of personal projects over the years. Few of these are open source and are available on my 
                 {' '}<a href="https://github.com/unmey08" className="text-blue-500 hover:cursor-pointer hover:text-black-500" target="_blank">
                     Github
@@ -26,7 +27,7 @@ const Projects = () => {
                 {projects.map((project) => (
                     <div className='lg:w-[400px] w-full' key={project.name}>
                         <div className='block-container w-12 h-12'>
-                            <div className={`btn-back rounded-xl ${project.theme}`} />
+                            <div className={`btn-back ${darkMode ? 'dark-mode-btn-back' : ''} rounded-xl ${project.theme}`} />
                             <div className='btn-front rounded-xl flex justify-center items-center'>
                                 <img
                                     src={project.iconUrl}
@@ -37,10 +38,10 @@ const Projects = () => {
                         </div>
 
                         <div className='mt-5 flex flex-col'>
-                            <h4 className='text-2xl font-poppins font-semibold'>
+                            <h4 className='text-2xl font-poppins font-semibold dark:text-blue-400'>
                                 {project.name}
                             </h4>
-                            <p className='mt-2 text-slate-500'>{project.description}</p>
+                            <p className='mt-2 text-slate-500 dark:text-gray-200'>{project.description}</p>
                             <div className='mt-5 flex items-center gap-2 font-poppins'>
                                 {/* <div className="mt-5 flex items-center gap-2 font-poppins">
                                     <Link
