@@ -1,6 +1,7 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import {useState} from 'react';
 import {logo} from '../assets/images'
+import pdfFile from "../assets/resume/UnmeyMahaddalkarResume.pdf";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,9 +35,7 @@ const Navbar = () => {
                     <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-gray-400 duration-500'}>
                         Contact Me
                     </NavLink>
-                    <NavLink to="/resume" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-gray-400 duration-500'}>
-                        Resume
-                    </NavLink>
+                    <Link to={pdfFile} target="_blank" className="btn -mt-3" download>Resume</Link>
                 </nav>
                 <div className='block md:hidden'>
                     {!isMenuOpen && <button className='text-3xl text-white duration-700 transition' onClick={openMenu}><ion-icon name="menu-outline"></ion-icon></button>}
@@ -58,9 +57,7 @@ const Navbar = () => {
                         <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-black uppercase my-12' : 'text-black dark:text-white transition ease-out duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
                             Contact Me
                         </NavLink>
-                        <NavLink to="/resume" className={({ isActive }) => isActive ? 'text-black uppercase my-12' : 'text-black dark:text-white transition ease-out  duration-500 block uppercase mt-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
-                            Resume
-                        </NavLink>
+                        <Link to={pdfFile} target="_blank" className="block mt-12 uppercase" download>Resume</Link>
                     </ul>
                 </div>
             }

@@ -27,7 +27,7 @@ const Home = () => {
     const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize();
 
     return (
-        <section className={`w-full h-screen relative ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}>
+        <section className={`w-full h-[100vh] dark:h-[100vh] relative ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}>
             <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
                 {currentStage && <HomeInfo currentStage={currentStage} />}
             </div>

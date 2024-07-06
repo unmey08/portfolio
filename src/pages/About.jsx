@@ -3,15 +3,14 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { CTA } from '../components'
 
-const About = () => {
+const About = ({theme}) => {
     const handleMouseOver = (skill) => {
         skill.hover = true;
         return skill; 
     }
 
-    const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     return (
-        <section className='max-container'>
+        <section className='w-full h-full dark:h-full max-container'>
             <h1 className='head-text dark:text-white'>
                 Hello, I'm <span className='blue-gradient_text font-semibold'>Unmey</span>
             </h1>
@@ -23,11 +22,11 @@ const About = () => {
 
             <div className='py-10 flex flex-col'>
                 <h3 className='subhead-text dark:text-white'>My Skills</h3>
-                <div className='mt-16 flex flex-wrap gap-12'>
+                <div className='mt-16 flex flex-wrap gap-12 justify-center md:justify-start'>
                     {skills.map((skill, index) => {
                         return (
                             <div className='block-container w-20 h-20' onMouseOver={() => handleMouseOver(skill)} key={skill.name}>
-                                <div className={`btn-back rounded-xl ${darkMode ? 'dark-mode-btn-back' : ''}`} />
+                                <div className={`btn-back rounded-xl ${theme === 'dark' ? 'dark-mode-btn-back' : ''}`} />
                                 <div className='btn-front rounded-xl flex justify-center items-center'>
                                     <img src={skill.imageUrl} alt={skill.name} className='w-1/2 h-1/2 object-contain'
                                         key={index} />
@@ -45,7 +44,7 @@ const About = () => {
                     </p>
                 </div>
                 <div className='mt-12 flex'>
-                    <VerticalTimeline lineColor={darkMode ? 'rgb(148 163 184)' : 'white'}>
+                    <VerticalTimeline lineColor={theme === 'dark' ? 'rgb(148 163 184)' : 'white'}>
                         {experiences.map((experience) => (
                             <VerticalTimelineElement key={experience.company_name} date={experience.date}
                                 dateClassName='dark:text-white'
@@ -58,10 +57,10 @@ const About = () => {
                                     borderStyle: 'solid',
                                     borderBottomColor: experience.iconBg,
                                     boxShadow: 'none',
-                                    background: darkMode ? experience.iconDarkBg : experience.iconBg
+                                    background: theme === 'dark' ? experience.iconDarkBg : ''
                                 }}
                                 contentArrowStyle={{
-                                    borderRight: `7px solid ${darkMode ? experience.iconDarkBg : experience.iconBg}`
+                                    borderRight: `${theme === 'dark' ? `7px solid ${experience.iconDarkBg}` : ''}`
                                 }}
                             >
                                 <div>

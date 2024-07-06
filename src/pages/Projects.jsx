@@ -5,8 +5,7 @@ import { projects } from "../constants";
 import { arrow } from "../assets/icons";
 import { socialLinks } from "../constants";
 
-const Projects = () => {
-    const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const Projects = ({theme}) => {
     return (
         <section className='max-container h-full dark:h-full'>
             <h1 className='head-text dark:text-white'>
@@ -27,7 +26,7 @@ const Projects = () => {
                 {projects.map((project) => (
                     <div className='lg:w-[400px] w-full' key={project.name}>
                         <div className='block-container w-12 h-12'>
-                            <div className={`btn-back ${darkMode ? 'dark-mode-btn-back' : ''} rounded-xl ${project.theme}`} />
+                            <div className={`btn-back ${theme === 'dark' ? 'dark-mode-btn-back' : ''} rounded-xl ${project.theme}`} />
                             <div className='btn-front rounded-xl flex justify-center items-center'>
                                 <img
                                     src={project.iconUrl}

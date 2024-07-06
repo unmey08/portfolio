@@ -218,10 +218,5 @@ export const options = [
         icon: 'moon',
         text: 'dark',
         id: 2
-    },
-    {
-        icon: 'desktop-outline',
-        text: 'system',
-        id: 3
     }
 ]

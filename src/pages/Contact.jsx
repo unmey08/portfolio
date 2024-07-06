@@ -14,13 +14,12 @@ const useAlert = () => {
     return { alert, showAlert, hideAlert };
 };
 
-const Contact = () => {
+const Contact = ({theme}) => {
     const formRef = useRef();
     const [form, setForm] = useState({ name: "", email: "", message: "" });
     const { alert, showAlert, hideAlert } = useAlert();
     const [loading, setLoading] = useState(false);
     const [currentAnimation, setCurrentAnimation] = useState("idle");
-    const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     const handleChange = ({ target: { name, value } }) => {
         setForm({ ...form, [name]: value });
@@ -80,7 +79,7 @@ const Contact = () => {
     };
 
     return (
-        <section className='relative flex lg:flex-row flex-col max-container h-screen dark:h-screen'>
+        <section className='relative flex lg:flex-row flex-col max-container w-full h-full dark:h-full'>
             {alert.show && <Alert {...alert} />}
 
             <div className='flex-1 min-w-[50%] flex flex-col'>
@@ -96,7 +95,7 @@ const Contact = () => {
                         <input
                             type='text'
                             name='name'
-                            className={darkMode ? 'dark-input' : 'input'}
+                            className={theme === 'dark' ? 'dark-input' : 'input'}
                             placeholder='John'
                             required
                             value={form.name}
@@ -110,7 +109,7 @@ const Contact = () => {
                         <input
                             type='email'
                             name='email'
-                            className={darkMode ? 'dark-input' : 'input'}
+                            className={theme === 'dark' ? 'dark-input' : 'input'}
                             placeholder='John@gmail.com'
                             required
                             value={form.email}
@@ -124,7 +123,7 @@ const Contact = () => {
                         <textarea
                             name='message'
                             rows='4'
-                            className={darkMode ? 'dark-textarea' : 'textarea'}
+                            className={theme === 'dark' ? 'dark-textarea' : 'textarea'}
                             placeholder='Write your thoughts here...'
                             value={form.message}
                             onChange={handleChange}
