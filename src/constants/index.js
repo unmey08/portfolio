@@ -10,7 +10,6 @@ import {
     html,
     javascript,
     jira,
-    linkedin,
     mongodb,
     nextjs,
     nodejs,
@@ -174,18 +173,21 @@ export const experiences = [
 export const socialLinks = [
     {
         name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
+        iconUrl: 'mail-outline',
+        link: 'mailto:unmey08@gmail.com',
+        className: 'hover:text-teal-600'
     },
     {
         name: 'GitHub',
-        iconUrl: github,
+        iconUrl: 'logo-github',
         link: 'https://github.com/unmey08',
+        className: 'hover:text-gray-500'
     },
     {
         name: 'LinkedIn',
-        iconUrl: linkedin,
+        iconUrl: 'logo-linkedin',
         link: 'https://www.linkedin.com/in/unmey',
+        className: 'hover:text-sky-600'
     }
 ];
 

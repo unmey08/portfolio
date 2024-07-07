@@ -38,6 +38,10 @@ body:has(.card[data-color="green"]:hover) {
     @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
   }
 
+  .gray-gradient_text {
+    @apply bg-gradient-to-r from-[#e5e7eb] to-[#567395] bg-clip-text text-transparent;
+  }
+
   .input {
     @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
   }
@@ -56,6 +60,10 @@ body:has(.card[data-color="green"]:hover) {
 
   .btn {
     @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+  }
+
+  .light-bg {
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff];
   }
 
   .header {
@@ -117,13 +125,14 @@ body:has(.card[data-color="green"]:hover) {
   transition: 250ms;
   transform-style: preserve-3d;
   transform-origin: bottom right;
-  transform: rotateZ(15deg);
+  transform: rotateZ(5deg);
   will-change: transform;
   box-shadow: 16px 0 40px #e4e4e4;
 }
 
 .block-container .dark-mode-btn-back {
   box-shadow: 8px 0 20px #166f87;
+  transform: rotateZ(5deg);
 }
 
 .block-container .btn-back-red {
@@ -183,8 +192,7 @@ body:has(.card[data-color="green"]:hover) {
   position: relative;
   border-radius: 10px;
   border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+  box-shadow: 8px 0 8px #242424;
 }
 
 .neo-brutalism-white {

@@ -2,7 +2,9 @@ import CTA from "./CTA";
 import Alert from "./Alert";
 import Loader from "./Loader";
 import Navbar from "./Navbar";
-// import Footer from "./Footer";
+import SocialLinks from "./SocialLinks";
+import Theme from "./Theme";
+import Volume from "./Volume";
 import HomeInfo from "./HomeInfo";
 
 export {
@@ -10,6 +12,8 @@ export {
     Alert,
     Loader,
     Navbar,
-    // Footer,
-    HomeInfo
+    SocialLinks,
+    HomeInfo,
+    Theme,
+    Volume
 }

@@ -4,6 +4,7 @@ import Volume from "./components/Volume";
 import Theme from "./components/Theme";
 import { Home, About, Projects, Contact } from './pages';
 import {useState, useEffect} from 'react';
+import SocialLinks from "./components/SocialLinks";
 
 const App = () => {
     const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -29,10 +30,11 @@ const App = () => {
     }, [theme])
 
     return (
-        <main className="h-full bg-slate-300/20 dark:bg-neutral-950 dark:h-full">
+        <main className="h-full bg-slate-300/20 dark:bg-neutral-950/95 dark:h-full">
             <Router>
-                <Navbar />
+                <Navbar theme={theme} setTheme={setTheme}/>
                 <Theme theme={theme} setTheme={setTheme}/>
+                <SocialLinks theme={theme} />
                 <Routes>
                     <Route path="/" element={<Home />}/>
                     <Route path="/about" element={<About theme={theme}/>} />

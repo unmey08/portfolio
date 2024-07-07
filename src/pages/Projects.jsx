@@ -7,7 +7,7 @@ import { socialLinks } from "../constants";
 
 const Projects = ({theme}) => {
     return (
-        <section className='max-container h-full dark:h-full'>
+        <section className='max-container md:h-screen dark:md:h-screen sm:h-[100vh] dark:sm:h-[100vh]'>
             <h1 className='head-text dark:text-white'>
                 My{" "}
                 <span className='blue-gradient_text drop-shadow font-semibold'>

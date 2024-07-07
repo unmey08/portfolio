@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import Loader from '../components/Loader';
 import Island from "../models/Island";
 import HomeInfo from "../components/HomeInfo";
+import HomeFooter from "../components/HomeFooter";
 
 
 const Home = () => {
@@ -39,10 +40,11 @@ const Home = () => {
                     <directionalLight position={[0, 1, 1]} intensity={2} />
                     <ambientLight intensity={1} />
                     <pointLight />
-                    <hemisphereLight skyColor='#b1e1ff' groundColor='#000000' intensity={2} />
+                    <hemisphereLight skyColor='#000000' groundColor='#000000' intensity={2} />
                     <Island position={islandPosition} scale={islandScale} rotation={islandRotation} isRotating={isRotating} setIsRotating={setIsRotating} setCurrentStage={setCurrentStage} />
                 </Suspense>
             </Canvas>
+            <HomeFooter />
         </section>
     )
 }
