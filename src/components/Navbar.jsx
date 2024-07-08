@@ -19,14 +19,14 @@ const Navbar = ({theme, setTheme}) => {
         animate: {
             scaleY: 1,
             transition: {
-                duration: 0.5,
+                duration: 0.2,
                 ease: [0.22, 0, 0.39, 1]
             }
         },
         exit: {
             scaleY: 0,
             transition: {
-                duration: 0.5,
+                duration: 0.3,
                 ease: [0.22, 1, 0.36, 1]
             }
         }

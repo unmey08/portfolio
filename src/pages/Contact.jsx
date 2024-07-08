@@ -87,71 +87,86 @@ const Contact = ({theme}) => {
                         transition: {delay: 0.1, duration: 0.2, ease: 'easeIn'}
                     }}>Get in Touch</motion.h1>
 
-                    <motion.form
+                    <form
                         ref={formRef}
                         onSubmit={handleSubmit}
                         className='w-full flex flex-col gap-7 mt-14'
-                        initial={{opacity: 0}} animate={{
-                        opacity: 1,
-                        transition: {delay: 0.4, duration: 0.2, ease: 'easeIn'}
-                    }}
                     >
-                        <label className='text-black-500 dark:text-slate-400 font-semibold'>
-                            Name
-                            <input
-                                type='text'
-                                name='name'
-                                className={theme === 'dark' ? 'dark-input' : 'input'}
-                                placeholder='John'
-                                required
-                                value={form.name}
-                                onChange={handleChange}
-                                onFocus={handleFocus}
-                                onBlur={handleBlur}
-                            />
-                        </label>
-                        <label className='text-black-500 dark:text-slate-400 font-semibold'>
-                            Email
-                            <input
-                                type='email'
-                                name='email'
-                                className={theme === 'dark' ? 'dark-input' : 'input'}
-                                placeholder='John@gmail.com'
-                                required
-                                value={form.email}
-                                onChange={handleChange}
-                                onFocus={handleFocus}
-                                onBlur={handleBlur}
-                            />
-                        </label>
-                        <label className='text-black-500 dark:text-slate-400 font-semibold'>
-                            Your Message
-                            <textarea
-                                name='message'
-                                rows='4'
-                                className={theme === 'dark' ? 'dark-textarea' : 'textarea'}
-                                placeholder='Write your thoughts here...'
-                                value={form.message}
-                                onChange={handleChange}
-                                onFocus={handleFocus}
-                                onBlur={handleBlur}
-                            />
-                        </label>
+                        <motion.div initial={{opacity: 0}} animate={{
+                            opacity: 1,
+                            transition: {delay: 0.2, duration: 0.4, ease: 'easeIn'}
+                        }}>
+                            <label className='text-black-500 dark:text-slate-400 font-semibold'>
+                                Name
+                                <input
+                                    type='text'
+                                    name='name'
+                                    className={theme === 'dark' ? 'dark-input' : 'input'}
+                                    placeholder='John'
+                                    required
+                                    value={form.name}
+                                    onChange={handleChange}
+                                    onFocus={handleFocus}
+                                    onBlur={handleBlur}
+                                />
+                            </label>
+                        </motion.div>
+                        <motion.div initial={{opacity: 0}} animate={{
+                            opacity: 1,
+                            transition: {delay: 0.3, duration: 0.4, ease: 'easeIn'}
+                        }}>
+                            <label className='text-black-500 dark:text-slate-400 font-semibold'>
+                                Email
+                                <input
+                                    type='email'
+                                    name='email'
+                                    className={theme === 'dark' ? 'dark-input' : 'input'}
+                                    placeholder='John@gmail.com'
+                                    required
+                                    value={form.email}
+                                    onChange={handleChange}
+                                    onFocus={handleFocus}
+                                    onBlur={handleBlur}
+                                />
+                            </label>
+                        </motion.div>
+                        <motion.div initial={{opacity: 0}} animate={{
+                            opacity: 1,
+                            transition: {delay: 0.4, duration: 0.4, ease: 'easeIn'}
+                        }}>
+                            <label className='text-black-500 dark:text-slate-400 font-semibold'>
+                                Your Message
+                                <textarea
+                                    name='message'
+                                    rows='4'
+                                    className={theme === 'dark' ? 'dark-textarea' : 'textarea'}
+                                    placeholder='Write your thoughts here...'
+                                    value={form.message}
+                                    onChange={handleChange}
+                                    onFocus={handleFocus}
+                                    onBlur={handleBlur}
+                                />
+                            </label>
+                        </motion.div>
 
-                        <button
+                        <motion.button
                             type='submit'
                             disabled={loading}
                             className='btn'
                             onFocus={handleFocus}
                             onBlur={handleBlur}
+                            initial={{opacity: 0}} animate={{
+                                opacity: 1,
+                                transition: {delay: 0.5, duration: 0.4, ease: 'easeIn'}
+                            }}
                         >
                             {loading ? "Sending..." : "Submit"}
-                        </button>
-                    </motion.form>
+                        </motion.button>
+                    </form>
 
                     <motion.div className="text-center text-black-500 dark:text-slate-400" initial={{opacity: 0}} animate={{
                         opacity: 1,
-                        transition: {delay: 0.7, duration: 0.2, ease: 'easeIn'}
+                        transition: {delay: 0.7, duration: 0.4, ease: 'easeIn'}
                     }}>
                         <p className="text-2xl font-bold mt-5">OR</p>
                         <p className="mt-5">You can reach out to me at <a href="mailto:unmey08@gmail.com" className="text-blue-500 hover:underline">unmey08@gmail.com</a></p>

@@ -55,12 +55,16 @@ const Home = ({theme}) => {
                             Full-stack Engineer in Canada with 5+ years of experience building impactful web applications across borders in an Agile framework. Expertise in React, Redux, and TypeScript to create user-centric and efficient UIs.
                         </p>
                     </motion.div>
-                    <motion.div className='flex justify-center mt-4' initial={{opacity: 0}} animate={{
+                    <motion.div className='flex justify-center md:mt-4 mt-6' initial={{opacity: 0}} animate={{
                         opacity: 1,
                         transition: {delay: 1.2, duration: 0.4, ease: 'easeIn'}
                     }}>
-                        <Link to={pdfFile} target="_blank" className="btn mr-4 hover:opacity-80 transition ease-in duration-200" download>Download CV</Link>
-                        <Link to='/contact' className="btn-no-bg dark:btn-dark-bg">Contact</Link>
+                        <motion.button whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10}}>
+                            <Link to={pdfFile} target="_blank" className="btn mr-4 hover:opacity-90" download>Download CV</Link>
+                        </motion.button>
+                        <motion.button whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10}}>
+                            <Link to='/contact' className="btn-no-bg dark:btn-dark-bg">Contact</Link>
+                        </motion.button>
                     </motion.div>
                 </div>
             </section>
