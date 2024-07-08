@@ -133,7 +133,7 @@ export const experiences = [
         company_name: "ADP | Pune, India",
         icon: adp,
         iconBg: "#fbc3bc",
-        iconDarkBg: "#262626",
+        iconDarkBg: "#1e293bf2",
         date: "March 2022 - August 2024",
         points: [
             "Integrated Benefits Assist MFE chatbot leveraging LLM to deliver intelligent and personalized responses to employee inquiries.",
@@ -148,7 +148,7 @@ export const experiences = [
         company_name: "AGM Tech Solutions - on Contract at ADP  | Parsippany, New Jersey",
         icon: agm,
         iconBg: "#b7e4c7",
-        iconDarkBg: "#262626",
+        iconDarkBg: "#1e293bf2",
         date: "July 2020 - February 2022",
         points: [
             "Architected a data extraction & auto-population solution for Benefits documents with custom insights & a PDF viewer for highlighting source data",
@@ -161,7 +161,7 @@ export const experiences = [
         company_name: "Egen Solutions - on Contract at ADP | Parsippany, New Jersey",
         icon: egen,
         iconBg: "#accbe1",
-        iconDarkBg: "#262626",
+        iconDarkBg: "#1e293bf2",
         date: "January 2020 - June 2020",
         points: [
             "Created accessible, responsive React JS components for Workforce Now Launchpad Benefits pages, enabling implementation consultants to craft insurance plans for smaller businesses with an average employee size of 40.",
@@ -214,11 +214,13 @@ export const options = [
     {
         icon: 'sunny',
         text: 'light',
-        id: 1
+        id: 1,
+        uiText: 'Light'
     },
     {
         icon: 'moon',
         text: 'dark',
-        id: 2
+        id: 2,
+        uiText: 'Dark'
     }
 ]

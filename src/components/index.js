@@ -4,8 +4,8 @@ import Loader from "./Loader";
 import Navbar from "./Navbar";
 import SocialLinks from "./SocialLinks";
 import Theme from "./Theme";
-import Volume from "./Volume";
 import HomeInfo from "./HomeInfo";
+import Particle from "./Particle";
 
 export {
     CTA,
@@ -15,5 +15,5 @@ export {
     SocialLinks,
     HomeInfo,
     Theme,
-    Volume
+    Particle
 }

@@ -1,9 +1,7 @@
 import emailjs from "@emailjs/browser";
-import { Canvas } from "@react-three/fiber";
-import { Suspense, useRef, useState } from "react";
-
-// import { Fox } from "../models";
-import { Alert, Loader } from "../components";
+import { useRef, useState } from "react";
+import AnimatedPage from "../components/AnimatedPage";
+import { motion } from "framer-motion";
 
 const useAlert = () => {
     const [alert, setAlert] = useState({ show: false, text: '', type: 'danger' });
@@ -79,79 +77,91 @@ const Contact = ({theme}) => {
     };
 
     return (
-        <section className='relative flex lg:flex-row flex-col max-container w-full h-screen dark:h-screen'>
-            {alert.show && <Alert {...alert} />}
+        <AnimatedPage>
+            <section className='relative flex lg:flex-row flex-col max-container w-full h-screen dark:h-screen'>
+                {alert.show && <Alert {...alert} />}
 
-            <div className='flex-1 min-w-[50%] flex flex-col'>
-                <h1 className='head-text dark:text-white'>Get in Touch</h1>
+                <div className='flex-1 min-w-[50%] flex flex-col'>
+                    <motion.h1 className='head-text dark:text-white' initial={{opacity: 0}} animate={{
+                        opacity: 1,
+                        transition: {delay: 0.1, duration: 0.2, ease: 'easeIn'}
+                    }}>Get in Touch</motion.h1>
 
-                <form
-                    ref={formRef}
-                    onSubmit={handleSubmit}
-                    className='w-full flex flex-col gap-7 mt-14'
-                >
-                    <label className='text-black-500 dark:text-slate-400 font-semibold'>
-                        Name
-                        <input
-                            type='text'
-                            name='name'
-                            className={theme === 'dark' ? 'dark-input' : 'input'}
-                            placeholder='John'
-                            required
-                            value={form.name}
-                            onChange={handleChange}
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                        />
-                    </label>
-                    <label className='text-black-500 dark:text-slate-400 font-semibold'>
-                        Email
-                        <input
-                            type='email'
-                            name='email'
-                            className={theme === 'dark' ? 'dark-input' : 'input'}
-                            placeholder='John@gmail.com'
-                            required
-                            value={form.email}
-                            onChange={handleChange}
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                        />
-                    </label>
-                    <label className='text-black-500 dark:text-slate-400 font-semibold'>
-                        Your Message
-                        <textarea
-                            name='message'
-                            rows='4'
-                            className={theme === 'dark' ? 'dark-textarea' : 'textarea'}
-                            placeholder='Write your thoughts here...'
-                            value={form.message}
-                            onChange={handleChange}
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                        />
-                    </label>
-
-                    <button
-                        type='submit'
-                        disabled={loading}
-                        className='btn'
-                        onFocus={handleFocus}
-                        onBlur={handleBlur}
+                    <motion.form
+                        ref={formRef}
+                        onSubmit={handleSubmit}
+                        className='w-full flex flex-col gap-7 mt-14'
+                        initial={{opacity: 0}} animate={{
+                        opacity: 1,
+                        transition: {delay: 0.4, duration: 0.2, ease: 'easeIn'}
+                    }}
                     >
-                        {loading ? "Sending..." : "Submit"}
-                    </button>
-                </form>
+                        <label className='text-black-500 dark:text-slate-400 font-semibold'>
+                            Name
+                            <input
+                                type='text'
+                                name='name'
+                                className={theme === 'dark' ? 'dark-input' : 'input'}
+                                placeholder='John'
+                                required
+                                value={form.name}
+                                onChange={handleChange}
+                                onFocus={handleFocus}
+                                onBlur={handleBlur}
+                            />
+                        </label>
+                        <label className='text-black-500 dark:text-slate-400 font-semibold'>
+                            Email
+                            <input
+                                type='email'
+                                name='email'
+                                className={theme === 'dark' ? 'dark-input' : 'input'}
+                                placeholder='John@gmail.com'
+                                required
+                                value={form.email}
+                                onChange={handleChange}
+                                onFocus={handleFocus}
+                                onBlur={handleBlur}
+                            />
+                        </label>
+                        <label className='text-black-500 dark:text-slate-400 font-semibold'>
+                            Your Message
+                            <textarea
+                                name='message'
+                                rows='4'
+                                className={theme === 'dark' ? 'dark-textarea' : 'textarea'}
+                                placeholder='Write your thoughts here...'
+                                value={form.message}
+                                onChange={handleChange}
+                                onFocus={handleFocus}
+                                onBlur={handleBlur}
+                            />
+                        </label>
 
-                <div className="text-center text-black-500 dark:text-slate-400">
-                    <p className="text-2xl font-bold mt-5">OR</p>
-                    <p className="mt-5">You can reach out to me at <a href="mailto:unmey08@gmail.com" className="text-blue-500 hover:underline">unmey08@gmail.com</a></p>
+                        <button
+                            type='submit'
+                            disabled={loading}
+                            className='btn'
+                            onFocus={handleFocus}
+                            onBlur={handleBlur}
+                        >
+                            {loading ? "Sending..." : "Submit"}
+                        </button>
+                    </motion.form>
+
+                    <motion.div className="text-center text-black-500 dark:text-slate-400" initial={{opacity: 0}} animate={{
+                        opacity: 1,
+                        transition: {delay: 0.7, duration: 0.2, ease: 'easeIn'}
+                    }}>
+                        <p className="text-2xl font-bold mt-5">OR</p>
+                        <p className="mt-5">You can reach out to me at <a href="mailto:unmey08@gmail.com" className="text-blue-500 hover:underline">unmey08@gmail.com</a></p>
+                    </motion.div>
                 </div>
-            </div>
 
-            <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
-            </div>
-        </section>
+                <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+                </div>
+            </section>
+        </AnimatedPage>
     );
 };
 

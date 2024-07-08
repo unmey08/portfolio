@@ -2,7 +2,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom'
 import {useState} from 'react';
 import pdfFile from "../assets/resume/UnmeyMahaddalkarResume.pdf";
 import { socialLinks } from '../constants';
-import { AnimatePresence, animate, delay, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Navbar = ({theme, setTheme}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,15 +10,6 @@ const Navbar = ({theme, setTheme}) => {
 
     const openMenu = () => {
         setIsMenuOpen(value => !value);
-    }
-
-    const setMenuClasses = () => {
-        if(isMenuOpen) {
-            return 'w-screen h-screen opacity-80'
-        }
-        else {
-            return 'w-0 h-0 opacity-0'
-        }
     }
 
     const menuVars = {
@@ -81,16 +72,15 @@ const Navbar = ({theme, setTheme}) => {
                     <h1 className={`text-2xl font-bold ${pathname === '/' ? 'gray-gradient_text' : 'blue-gradient_text'} font-poppins`}>UM</h1>
                 </NavLink>
                 <nav className='text-lg gap-7 font-medium hidden md:flex'>
-                    <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-gray-400 duration-500'}>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-blue-400 duration-500'}>
                         About
                     </NavLink>
-                    <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-gray-400 duration-500'}>
+                    <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-blue-400 duration-500'}>
                         Projects
                     </NavLink>
-                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-gray-400 duration-500'}>
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-blue-400 duration-500'}>
                         Contact Me
                     </NavLink>
-                    <Link to={pdfFile} target="_blank" className="btn -mt-2" download>Resume</Link>
                 </nav>
                 <div className={`${theme === 'dark'? 'text-white' : 'text-black'} md:hidden text-3xl flex justify-between gap-10 w-full`}>
                     {!isMenuOpen && <button className='duration-700 transition block' onClick={openMenu}><ion-icon name="menu-outline"></ion-icon></button>}
@@ -100,25 +90,25 @@ const Navbar = ({theme, setTheme}) => {
             </header>
             <AnimatePresence>
             {isMenuOpen &&
-                <motion.div variants={menuVars} initial="initial" animate="animate" exit="exit" className={`z-50 fixed w-full h-screen ${setMenuClasses()} flex justify-center items-center ${theme === 'dark' ? 'bg-neutral-900' : 'light-bg'} dark:opacity-100 opacity-100 flex-col origin-top absolute`}>
+                <motion.div variants={menuVars} initial="initial" animate="animate" exit="exit" className={`z-50 fixed w-full h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-slate-950 absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#313141,transparent)]' : 'absolute inset-0 -z-10 bg-white [background:radial-gradient(105%_105%_at_50%_10%,#f1f5f9_40%,#0072aa_100%)]'} dark:opacity-100 opacity-100 flex-col origin-top absolute`}>
                     <motion.div variants={containerVars} initial="initial" animate="animate" exit="initial" className='text-white text-4xl font-semibold font-sans overflow-hidden'>
                         <motion.div variants={navVars} initial="initial" animate="open">
-                            <NavLink to="/" className={({ isActive }) => isActive ? 'text-white uppercase my-12 dark:blue-gradient_text' : 'text-black dark:text-white transition ease-out duration-500 block uppercase mb-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
+                            <NavLink to="/" className={({ isActive }) => isActive ? 'text-blue-500 uppercase my-12 dark:blue-gradient_text' : 'text-black dark:text-white transition ease-out duration-500 block uppercase mb-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
                             Home
                             </NavLink>
                         </motion.div>
                         <motion.div variants={navVars} initial="initial" animate="open">
-                            <NavLink to="/about" className={({ isActive }) => isActive ? 'text-white uppercase my-12 dark:blue-gradient_text' : 'text-black dark:text-white transition ease-out  duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
+                            <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500 uppercase my-12 dark:blue-gradient_text' : 'text-black dark:text-white transition ease-out  duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
                             About
                             </NavLink>
                         </motion.div>
                         <motion.div variants={navVars} initial="initial" animate="open">
-                            <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-white uppercase my-12 dark:blue-gradient_text' : 'text-black dark:text-white transition ease-out  duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
+                            <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-blue-500 uppercase my-12 dark:blue-gradient_text' : 'text-black dark:text-white transition ease-out  duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
                                 Projects
                             </NavLink>
                         </motion.div>
                         <motion.div variants={navVars} initial="initial" animate="open">
-                            <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-white uppercase my-12 dark:blue-gradient_text' : 'text-black dark:text-white transition ease-out duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
+                            <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500 uppercase my-12 dark:blue-gradient_text' : 'text-black dark:text-white transition ease-out duration-500 block uppercase my-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
                                 Contact Me
                             </NavLink>
                         </motion.div>
@@ -133,7 +123,7 @@ const Navbar = ({theme, setTheme}) => {
                             </Link>
                         ))}
                     </div>
-                    {isMenuOpen && <button className={`block text-lg uppercase mt-20 ${theme === 'dark' ? 'text-white' : 'text-black'}`} onClick={openMenu}>Close</button>}
+                    {isMenuOpen && <button className={`block text-lg uppercase mt-12 ${theme === 'dark' ? 'text-white' : 'text-black'}`} onClick={openMenu}>Close</button>}
                 </motion.div>
             }
             </AnimatePresence>
