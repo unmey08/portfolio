@@ -84,7 +84,7 @@ const Contact = ({theme}) => {
                 <div className='flex-1 min-w-[50%] flex flex-col'>
                     <motion.h1 className='head-text dark:text-white' initial={{opacity: 0}} animate={{
                         opacity: 1,
-                        transition: {delay: 0.1, duration: 0.2, ease: 'easeIn'}
+                        transition: {duration: 0.4, ease: [0.22, 0, 0.39, 1]}
                     }}>Get in Touch</motion.h1>
 
                     <form
@@ -94,7 +94,7 @@ const Contact = ({theme}) => {
                     >
                         <motion.div initial={{opacity: 0}} animate={{
                             opacity: 1,
-                            transition: {delay: 0.2, duration: 0.4, ease: 'easeIn'}
+                            transition: {delay: 0.2, duration: 0.4, ease: [0.22, 0, 0.39, 1]}
                         }}>
                             <label className='text-black-500 dark:text-slate-400 font-semibold'>
                                 Name
@@ -113,7 +113,7 @@ const Contact = ({theme}) => {
                         </motion.div>
                         <motion.div initial={{opacity: 0}} animate={{
                             opacity: 1,
-                            transition: {delay: 0.3, duration: 0.4, ease: 'easeIn'}
+                            transition: {delay: 0.4, duration: 0.4, ease: [0.22, 0, 0.39, 1]}
                         }}>
                             <label className='text-black-500 dark:text-slate-400 font-semibold'>
                                 Email
@@ -132,7 +132,7 @@ const Contact = ({theme}) => {
                         </motion.div>
                         <motion.div initial={{opacity: 0}} animate={{
                             opacity: 1,
-                            transition: {delay: 0.4, duration: 0.4, ease: 'easeIn'}
+                            transition: {delay: 0.6, duration: 0.4, ease: [0.22, 0, 0.39, 1]}
                         }}>
                             <label className='text-black-500 dark:text-slate-400 font-semibold'>
                                 Your Message
@@ -157,7 +157,7 @@ const Contact = ({theme}) => {
                             onBlur={handleBlur}
                             initial={{opacity: 0}} animate={{
                                 opacity: 1,
-                                transition: {delay: 0.5, duration: 0.4, ease: 'easeIn'}
+                                transition: {delay: 0.8, duration: 0.4, ease: [0.22, 0, 0.39, 1]}
                             }}
                         >
                             {loading ? "Sending..." : "Submit"}
@@ -166,7 +166,7 @@ const Contact = ({theme}) => {
 
                     <motion.div className="text-center text-black-500 dark:text-slate-400" initial={{opacity: 0}} animate={{
                         opacity: 1,
-                        transition: {delay: 0.7, duration: 0.4, ease: 'easeIn'}
+                        transition: {delay: 1, duration: 0.4, ease: [0.22, 0, 0.39, 1]}
                     }}>
                         <p className="text-2xl font-bold mt-5">OR</p>
                         <p className="mt-5">You can reach out to me at <a href="mailto:unmey08@gmail.com" className="text-blue-500 hover:underline">unmey08@gmail.com</a></p>

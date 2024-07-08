@@ -160,7 +160,7 @@ export const experiences = [
         title: "Application Developer",
         company_name: "Egen Solutions - on Contract at ADP | Parsippany, New Jersey",
         icon: egen,
-        iconBg: "#accbe1",
+        iconBg: "#60a5fa",
         iconDarkBg: "#1e293bf2",
         date: "January 2020 - June 2020",
         points: [

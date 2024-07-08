@@ -24,7 +24,7 @@ const Theme = ({theme, setTheme}) => {
                                     mount: {scale: 1, y: 0},
                                     unmount: {scale: 0, y: 25}
                     }} className="bg-neutral-500 dark:bg-slate-700" key={themeOption.id}>
-                        <motion.button whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 400, damping: 10}} className={`w-8 h-8 leading-9 text-xl rounded-full m-1 ${themeOption.text === theme ? setIconClass(themeOption) : ''} ${themeOption.text === 'dark' ? 'hover:text-blue-600' : 'hover:text-yellow-500'}`} onClick={() => setTheme(themeOption.text)}>
+                        <motion.button whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 400, damping: 10}} className={`w-8 h-8 leading-9 text-xl rounded-full m-1 ${themeOption.text === theme ? setIconClass(themeOption) : ''} ${themeOption.text === 'dark' ? 'hover:text-blue-600' : 'hover:text-yellow-500'} active:bg-white`} onClick={() => setTheme(themeOption.text)}>
                             <ion-icon name={themeOption.icon}></ion-icon>
                         </motion.button>
                     </Tooltip>

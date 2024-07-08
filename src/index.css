@@ -48,7 +48,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .gray-gradient_text {
-    @apply bg-gradient-to-r from-[#e5e7eb] to-[#567395] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#191a1b] to-[#33393f] bg-clip-text text-transparent;
   }
 
   .input {
@@ -144,7 +144,7 @@ body:has(.card[data-color="green"]:hover) {
   transform-origin: bottom right;
   transform: rotateZ(5deg);
   will-change: transform;
-  box-shadow: 16px 0 40px #e4e4e4;
+  box-shadow: 8px 0 20px #0284c755;
 }
 
 .block-container .dark-mode-btn-back {

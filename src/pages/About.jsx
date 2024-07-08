@@ -15,6 +15,20 @@ const About = ({theme}) => {
     return (
         <AnimatedPage>
             <section className='w-full h-full dark:h-full max-container'>
+                <h1 className='head-text dark:text-white'>
+                    <span className='blue-gradient_text drop-shadow font-semibold'>
+                        About
+                    </span>
+                    {" "} Me
+                </h1>
+                <motion.div className='mt-5 flex flex-col gap-3 text-slate-700 dark:text-gray-200' initial={{opacity: 0}} animate={{
+                    opacity: 1,
+                    transition: {duration: 0.4, ease: 'easeIn'}
+                }}>
+                    <p>
+                        I'm a Full-stack Developer based in Canada with 5+ years of experience building impactful web applications across borders in an Agile framework. Expertise in React, Redux, and TypeScript to create user-centric and efficient UIs.
+                    </p>
+                </motion.div>
                 <div className='py-10 flex flex-col'>
                     <motion.h3 className='subhead-text dark:text-white' initial={{opacity: 0}} animate={{
                         opacity: 1,
@@ -56,7 +70,7 @@ const About = ({theme}) => {
                         </p>
                     </div>
                     <div className='mt-12 flex'>
-                        <VerticalTimeline lineColor={theme === 'dark' ? 'rgb(148 163 184)' : 'white'}>
+                        <VerticalTimeline lineColor={theme === 'dark' ? 'rgb(148 163 184)' : '#ffffffaa'}>
                             {experiences.map((experience) => (
                                 <VerticalTimelineElement key={experience.company_name} date={experience.date}
                                     dateClassName='dark:text-white'
@@ -69,10 +83,10 @@ const About = ({theme}) => {
                                         borderStyle: 'solid',
                                         borderBottomColor: experience.iconBg,
                                         boxShadow: 'none',
-                                        background: theme === 'dark' ? experience.iconDarkBg : ''
+                                        background: theme === 'dark' ? experience.iconDarkBg : '#ffffffaa'
                                     }}
                                     contentArrowStyle={{
-                                        borderRight: `${theme === 'dark' ? `7px solid ${experience.iconDarkBg}` : ''}`
+                                        borderRight: `${theme === 'dark' ? `7px solid ${experience.iconDarkBg}` : '7px solid #ffffffaa'}`
                                     }}
                                 >
                                     <div>
@@ -85,7 +99,7 @@ const About = ({theme}) => {
                                     </div>
                                     <ul className='my-5 list-disc ml-5 space-y-2'>
                                         {experience.points.map((point, index) => (
-                                            <li className='text-black-500/50 dark:text-slate-400 font-normal ' key={`experience-point-${index}`}>{point}</li>
+                                            <li className='text-black-500/70 dark:text-slate-400 font-normal ' key={`experience-point-${index}`}>{point}</li>
                                         ))}
                                     </ul>
                                 </VerticalTimelineElement>

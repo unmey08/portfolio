@@ -69,17 +69,17 @@ const Navbar = ({theme, setTheme}) => {
         <div>
             <header className='header'>
                 <NavLink to="/" className="hidden md:block">
-                    <h1 className={`text-2xl font-bold ${pathname === '/' ? 'gray-gradient_text' : 'blue-gradient_text'} font-poppins`}>UM</h1>
+                    <h1 className={`text-2xl font-bold ${'blue-gradient_text'} font-poppins`}>UM</h1>
                 </NavLink>
                 <nav className='text-lg gap-7 font-medium hidden md:flex'>
-                    <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-blue-400 duration-500'}>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-blue-400 duration-100 hover:scale-x-105'}>
                         About
                     </NavLink>
-                    <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-blue-400 duration-500'}>
+                    <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-blue-400 duration-100 hover:scale-x-105'}>
                         Projects
                     </NavLink>
-                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-blue-400 duration-500'}>
-                        Contact Me
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-blue-500' : 'text-black dark:text-gray-200 hover:text-blue-400 duration-100 hover:scale-x-105'}>
+                        Contact
                     </NavLink>
                 </nav>
                 <div className={`${theme === 'dark'? 'text-white' : 'text-black'} md:hidden text-3xl flex justify-between gap-10 w-full`}>
@@ -90,7 +90,7 @@ const Navbar = ({theme, setTheme}) => {
             </header>
             <AnimatePresence>
             {isMenuOpen &&
-                <motion.div variants={menuVars} initial="initial" animate="animate" exit="exit" className={`z-50 fixed w-full h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-slate-950 absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#313141,transparent)]' : 'absolute inset-0 -z-10 bg-white [background:radial-gradient(105%_105%_at_50%_10%,#f1f5f9_40%,#0072aa_100%)]'} dark:opacity-100 opacity-100 flex-col origin-top absolute`}>
+                <motion.div variants={menuVars} initial="initial" animate="animate" exit="exit" className={`z-50 fixed w-full h-screen flex justify-center items-center ${theme === 'dark' ? 'bg-slate-950 absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#313141,transparent)]' : 'absolute inset-0 -z-10 bg-white [background:radial-gradient(135%_135%_at_50%_10%,#f1f5f9_20%,#93c5ff_100%)]'} dark:opacity-100 opacity-100 flex-col origin-top absolute`}>
                     <motion.div variants={containerVars} initial="initial" animate="animate" exit="initial" className='text-white text-4xl font-semibold font-sans overflow-hidden'>
                         <motion.div variants={navVars} initial="initial" animate="open">
                             <NavLink to="/" className={({ isActive }) => isActive ? 'text-blue-500 uppercase my-12 dark:blue-gradient_text' : 'text-black dark:text-white transition ease-out duration-500 block uppercase mb-12'} onClick={() => setIsMenuOpen(prev => !prev)}>
