@@ -6,7 +6,8 @@ import {useState, useEffect} from 'react';
 import SocialLinks from "./components/SocialLinks";
 import { AnimatePresence } from "framer-motion";
 import { Particle } from "./components";
-// import Particle from "./components/Particle";
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const App = () => {
     const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -33,7 +34,8 @@ const App = () => {
     }, [theme])
 
     return (
-        <main className={`h-fit dark:h-fit w-full no-scrollbar ${theme === 'dark' ? 'bg-slate-950 absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#313141,transparent)]' : 'absolute top-0 z-[-2] bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(220,225,225,0.2),rgba(0,114,255,0.2))]'} `}>
+        <main className={`background-fade h-fit dark:h-fit w-full no-scrollbar ${theme === 'dark' ? 'bg-slate-950 absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#313141,transparent)]' : 'absolute top-0 z-[-2] bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(220,225,225,0.2),rgba(0,114,255,0.2))]'} `}>
+            <ScrollToTop />
             <Particle />
                 <Navbar theme={theme} setTheme={setTheme}/>
                 <Theme theme={theme} setTheme={setTheme}/>
@@ -46,6 +48,7 @@ const App = () => {
                         <Route path="/projects" element={<Projects theme={theme}/>} />
                     </Routes>
                 </AnimatePresence>
+            <ScrollToTopButton />
         </main>
     )
 }

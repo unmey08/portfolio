@@ -9,7 +9,7 @@ import AnimatedPage from "../components/AnimatedPage";
 const Projects = ({theme}) => {
     return (
         <AnimatedPage>
-            <section className='max-container md:h-screen dark:md:h-screen sm:h-[100vh] dark:sm:h-[100vh]'>
+            <section className='max-container h-[100vh] dark:h-[100vh]'>
                 <motion.h1 className='head-text dark:text-white' initial={{opacity: 0}} animate={{
                     opacity: 1,
                     transition: {duration: 0.3, ease: 'easeIn'}

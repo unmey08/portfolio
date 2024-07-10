@@ -95,6 +95,10 @@ body:has(.card[data-color="green"]:hover) {
     @apply flex flex-wrap gap-7 items-center justify-between;
   }
 
+  .background-fade {
+    @apply transition-colors duration-500 ease-in;
+  }
+
   .info-box {
     @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
   }

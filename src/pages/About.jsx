@@ -59,7 +59,7 @@ const About = ({theme}) => {
                         })}
                     </div>
                 </div>
-                <div className='py-16 '>
+                <div className='py-16'>
                     <motion.h3 className='subhead-text dark:text-white' initial={{opacity: 0}} animate={{
                         opacity: 1,
                         transition: {duration: 0.1, ease: 'easeIn'}

@@ -2,6 +2,7 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import AnimatedPage from "../components/AnimatedPage";
 import { motion } from "framer-motion";
+import Alert from "../components/Alert";
 
 const useAlert = () => {
     const [alert, setAlert] = useState({ show: false, text: '', type: 'danger' });
@@ -78,7 +79,7 @@ const Contact = ({theme}) => {
 
     return (
         <AnimatedPage>
-            <section className='relative flex lg:flex-row flex-col max-container w-full h-screen dark:h-screen'>
+            <section className='relative flex lg:flex-row flex-col max-container w-full h-full dark:h-full'>
                 {alert.show && <Alert {...alert} />}
 
                 <div className='flex-1 min-w-[50%] flex flex-col'>
@@ -97,11 +98,11 @@ const Contact = ({theme}) => {
                             transition: {delay: 0.2, duration: 0.4, ease: [0.22, 0, 0.39, 1]}
                         }}>
                             <label className='text-black-500 dark:text-slate-400 font-semibold'>
-                                Name
+                                Name <span>*</span>
                                 <input
                                     type='text'
                                     name='name'
-                                    className={theme === 'dark' ? 'dark-input' : 'input'}
+                                    className={`${theme === 'dark' ? 'dark-input' : 'input'}`}
                                     placeholder='John'
                                     required
                                     value={form.name}
@@ -116,7 +117,7 @@ const Contact = ({theme}) => {
                             transition: {delay: 0.4, duration: 0.4, ease: [0.22, 0, 0.39, 1]}
                         }}>
                             <label className='text-black-500 dark:text-slate-400 font-semibold'>
-                                Email
+                                Email <span>*</span>
                                 <input
                                     type='email'
                                     name='email'

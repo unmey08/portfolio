@@ -12,12 +12,12 @@ const Home = ({theme}) => {
         <AnimatedPage>
             <Particle />
             <section className='relative flex md:flex-row flex-col max-container w-full h-screen dark:h-screen items-center justify-center content-center'>
-                <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+                <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px] md:self-end lg:self-auto'>
                     <motion.div initial={{opacity: 0}} animate={{
                         opacity: 1,
                         transition: {delay: 1, duration: 0.4, ease: 'easeIn'}
                     }}>
-                        <img src={profile} alt="profile-pic" className='rounded-full w-96 h-96 border-4 border-solid shadow-md border-blue-500' width={window.innerWidth < 768 ? 300 : 400} height={window.innerWidth < 768 ? 300 : 400}/>
+                        <img src={profile} alt="profile-pic" className='rounded-full lg:w-96 lg:h-96 border-4 border-solid shadow-md border-blue-500 md:w-72 md:h-72' width={window.innerWidth < 768 ? 300 : 400} height={window.innerWidth < 768 ? 300 : 400}/>
                     </motion.div>
                 </div>
                 <div className='flex-1 min-w-[50%] flex flex-col mt-16 md:mt-0 text-center md:text-left'>
