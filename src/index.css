@@ -68,15 +68,15 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .btn {
-    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-base w-full sm:w-auto px-5 py-3 text-center;
   }
 
   .btn-no-bg {
-    @apply text-black  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center border-2 border-black border-solid hover:text-white hover:bg-gray-700 transition duration-300;
+    @apply text-black  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-base w-full sm:w-auto px-5 py-3 text-center border-2 border-black border-solid hover:text-white hover:bg-gray-700 transition duration-300;
   }
 
   .btn-dark-bg {
-    @apply text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto px-5 py-2.5 text-center border-2 border-white border-solid hover:text-white hover:bg-gray-700 transition duration-300;
+    @apply text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-base w-full sm:w-auto px-5 py-3 text-center border-2 border-white border-solid hover:text-white hover:bg-gray-700 transition duration-300;
   }
 
   .light-bg {

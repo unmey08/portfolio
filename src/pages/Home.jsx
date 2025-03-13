@@ -61,12 +61,14 @@ const Home = ({ theme }) => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                aria-label="Button to Download CV"
               >
                 <Link
                   to={pdfFile}
                   target="_blank"
-                  className="btn mr-4 hover:opacity-90"
+                  className="btn mr-6 hover:opacity-95"
                   download
+                  aria-label="Download CV"
                 >
                   Download CV
                 </Link>
@@ -74,8 +76,13 @@ const Home = ({ theme }) => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                aria-label="Contact"
               >
-                <Link to="/contact" className="btn-no-bg dark:btn-dark-bg">
+                <Link
+                  to="/contact"
+                  className="btn-no-bg dark:btn-dark-bg"
+                  aria-label="Navigate to Contact"
+                >
                   Contact
                 </Link>
               </motion.button>
