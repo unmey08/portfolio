@@ -7,7 +7,7 @@ const SocialLinks = ({ theme, page }) => {
     <div
       className={`${
         page === "Home" && window.innerWidth < 768
-          ? "flex flex-row text-3xl mt-8 justify-center space-x-5"
+          ? "flex flex-row text-3xl mt-8 space-x-5"
           : "hidden md:fixed top-1/3 left-0 duration-400 dark:bg-slate-800/95 rounded-lg md:flex border-solid bg-blue-300/20 flex-col text-3xl py-10 px-2"
       }`}
     >

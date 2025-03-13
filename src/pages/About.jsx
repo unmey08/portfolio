@@ -36,10 +36,10 @@ const About = ({ theme }) => {
             }}
           >
             <p>
-              I'm a Full-stack Developer based in Vancouver, Canada with 5+
-              years of experience building impactful web applications across
-              borders in an Agile framework. Expertise in React, Redux, and
-              TypeScript to create user-centric and efficient UIs.
+              I'm a Front-End Engineer based in Vancouver, Canada with 5 years
+              of experience building impactful web applications across borders
+              in an Agile framework. Expertise in React, Redux, and JavaScript
+              to create user-centric and efficient UIs.
             </p>
           </motion.div>
           <div className="py-10 flex flex-col">

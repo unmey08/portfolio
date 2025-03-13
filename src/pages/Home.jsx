@@ -13,7 +13,7 @@ const Home = ({ theme }) => {
       <AnimatedPage>
         <Particle />
         <section className="relative flex md:flex-row flex-col max-container w-full h-screen dark:h-screen items-center justify-center content-center">
-          <div className="flex-1 min-w-[50%] flex flex-col mt-16 md:mt-0 text-center md:text-center">
+          <div className="min-w-[50%] flex flex-col md:mt-0 text-left">
             <motion.h1
               className="head-text dark:text-white"
               initial={{ opacity: 0, y: "-10vh" }}
@@ -40,17 +40,17 @@ const Home = ({ theme }) => {
                 transition: { delay: 0.4, duration: 0.6, ease: "easeIn" },
               }}
             >
-              <p className="md:text-4xl blue-gradient_text font-bold">
+              <p className="text-3xl blue-gradient_text font-bold">
                 Front-End Engineer
               </p>
               <p
-                className={`text-lg text-gray-600 dark:text-white/80 space-x-14 font-bold`}
+                className={`text-lg text-gray-600 dark:text-white/80 space-x-14 md:font-semibold sm:font-normal`}
               >
                 I transform design concepts into interactive web experiences.
               </p>
             </motion.div>
             <motion.div
-              className="md:flex md:mt-8 mt-8 flex-row hidden justify-center"
+              className="md:flex md:mt-8 mt-8 flex-row hidden"
               initial={{ opacity: 0, y: "10vh" }}
               animate={{
                 opacity: 1,

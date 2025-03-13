@@ -36,7 +36,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .head-text {
-    @apply sm:text-6xl md:text-6xl font-semibold sm:leading-snug font-poppins;
+    @apply text-5xl font-semibold sm:leading-snug font-poppins;
   }
 
   .subhead-text {
