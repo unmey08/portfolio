@@ -1,13 +1,17 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Theme from "./components/Theme";
-import { Home, About, Projects, Contact } from "./pages";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy } from "react";
 import SocialLinks from "./components/SocialLinks";
 import { AnimatePresence } from "framer-motion";
 import { Particle } from "./components";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+
+const About = lazy(() => import("./pages/About"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Home = lazy(() => import("./pages/Home"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 const App = () => {
   const darkMode =
