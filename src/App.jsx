@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Theme from "./components/Theme";
-import { useState, useEffect, lazy } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import SocialLinks from "./components/SocialLinks";
 import { AnimatePresence } from "framer-motion";
 import { Particle } from "./components";
@@ -54,10 +54,38 @@ const App = () => {
       <SocialLinks theme={theme} page={"App"} />
       <AnimatePresence mode="wait">
         <Routes key={location.pathname} location={location}>
-          <Route path="/" element={<Home theme={theme} />} />
-          <Route path="/about" element={<About theme={theme} />} />
-          <Route path="/contact" element={<Contact theme={theme} />} />
-          <Route path="/projects" element={<Projects theme={theme} />} />
+          <Route
+            path="/"
+            element={
+              <Suspense>
+                <Home theme={theme} />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Suspense>
+                <About theme={theme} />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Suspense>
+                <Contact theme={theme} />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <Suspense>
+                <Projects theme={theme} />
+              </Suspense>
+            }
+          />
         </Routes>
       </AnimatePresence>
       <ScrollToTopButton />
