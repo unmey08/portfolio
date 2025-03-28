@@ -4,7 +4,7 @@ import Theme from "./components/Theme";
 import { useState, useEffect, lazy, Suspense } from "react";
 import SocialLinks from "./components/SocialLinks";
 import { AnimatePresence } from "framer-motion";
-import { Particle } from "./components";
+import { Loader, Particle } from "./components";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
@@ -57,7 +57,7 @@ const App = () => {
           <Route
             path="/"
             element={
-              <Suspense>
+              <Suspense fallback={<Loader />}>
                 <Home theme={theme} />
               </Suspense>
             }
@@ -65,7 +65,7 @@ const App = () => {
           <Route
             path="/about"
             element={
-              <Suspense>
+              <Suspense fallback={<Loader />}>
                 <About theme={theme} />
               </Suspense>
             }
@@ -73,7 +73,7 @@ const App = () => {
           <Route
             path="/contact"
             element={
-              <Suspense>
+              <Suspense fallback={<Loader />}>
                 <Contact theme={theme} />
               </Suspense>
             }
@@ -81,7 +81,7 @@ const App = () => {
           <Route
             path="/projects"
             element={
-              <Suspense>
+              <Suspense fallback={<Loader />}>
                 <Projects theme={theme} />
               </Suspense>
             }
