@@ -128,7 +128,7 @@ const About = ({ theme }) => {
             </div>
             <div className="mt-12 flex">
               <VerticalTimeline
-                lineColor={theme === "dark" ? "rgb(148 163 184)" : "#ffffffaa"}
+                lineColor={theme === "dark" ? "rgb(148 163 184)" : "#bedbff"}
               >
                 {experiences.map((experience) => (
                   <VerticalTimelineElement
@@ -151,7 +151,7 @@ const About = ({ theme }) => {
                       borderBottomColor: experience.iconBg,
                       boxShadow: "none",
                       background:
-                        theme === "dark" ? experience.iconDarkBg : "#ffffffaa",
+                        theme === "dark" ? experience.iconDarkBg : "#fffffff2",
                     }}
                     contentArrowStyle={{
                       borderRight: `${
@@ -184,7 +184,7 @@ const About = ({ theme }) => {
               </VerticalTimeline>
             </div>
           </div>
-          <hr className="border-white" />
+          <hr className=" border-sky-200 dark:border-slate-400" />
           <CTA />
         </section>
       </AnimatedPage>

@@ -199,9 +199,9 @@ export const projects = [
     theme: "btn-back-red",
     name: "Propulse",
     description:
-      "Created a  property rental full-stack web application using Next.js, Tailwind and MongoDB",
+      "Creating a property rental full-stack web application using Next.js, Tailwind and MongoDB",
     githubLink: "https://github.com/unmey08/propulse-property-finder",
-    link: "",
+    link: "https://propulse-property-finder.vercel.app/",
   },
   {
     iconUrl: chess,
@@ -210,7 +210,7 @@ export const projects = [
     description:
       "Developed a two-player Chess.com clone using NodeJS, ChessJS, Web sockets and EJS.",
     githubLink: "https://github.com/unmey08/chesscom-clone",
-    link: "",
+    link: "https://github.com/unmey08/chesscom-clone",
   },
 ];
 
