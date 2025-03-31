@@ -19,15 +19,15 @@ const Navbar = ({ theme, setTheme }) => {
     animate: {
       scaleY: 1,
       transition: {
-        duration: 0.2,
-        ease: [0.22, 0, 0.39, 1],
+        duration: 0.4,
+        ease: [0.7, 0, 0.6, 1],
       },
     },
     exit: {
       scaleY: 0,
       transition: {
-        duration: 0.3,
-        ease: [0.22, 1, 0.36, 1],
+        duration: 0.4,
+        ease: [0.62, 1, 0.6, 1],
       },
     },
   };
@@ -37,7 +37,7 @@ const Navbar = ({ theme, setTheme }) => {
       y: "30vh",
       transition: {
         duration: 0.5,
-        ease: [0.37, 0, 0.63, 1],
+        ease: [0.67, 0, 0.63, 1],
       },
     },
     open: {
@@ -142,8 +142,8 @@ const Navbar = ({ theme, setTheme }) => {
             exit="exit"
             className={`z-50 fixed w-full h-screen flex justify-center items-center ${
               theme === "dark"
-                ? "bg-slate-950 absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#313141,transparent)]"
-                : "absolute inset-0 -z-10 bg-white [background:radial-gradient(135%_135%_at_50%_10%,#f1f5f9_20%,#93c5ff_100%)]"
+                ? "bg-slate-950 absolute bottom-0 left-0 right-0 top-0 dark:bg-gradient-to-br dark:from-gray-800 dark:to-slate-950"
+                : "absolute inset-0 -z-10 bg-gradient-to-br from-blue-100 to-slate-100"
             } dark:opacity-100 opacity-100 flex-col origin-top absolute`}
           >
             <motion.div

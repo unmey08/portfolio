@@ -43,8 +43,8 @@ const App = () => {
     <main
       className={`background-fade h-fit dark:h-fit w-full no-scrollbar ${
         theme === "dark"
-          ? "bg-slate-950 absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#313141,transparent)]"
-          : "absolute top-0 z-[-2] bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(220,225,225,0.2),rgba(0,114,255,0.2))]"
+          ? "bg-slate-950 absolute bottom-0 left-0 right-0 top-0 dark:bg-gradient-to-br dark:from-gray-800 dark:to-slate-950"
+          : "absolute top-0 z-[-2] bg-gradient-to-br from-blue-100 to-slate-100"
       } `}
     >
       <ScrollToTop />
