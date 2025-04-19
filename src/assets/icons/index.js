@@ -21,6 +21,8 @@ import chess from "./chess-pawn-icon.svg";
 import jira from "./jira.svg";
 import bitbucket from "./bitbucket.svg";
 import postgres from "./postgresql-icon.svg";
+import rocket from "./rocket.svg";
+import movie from "./movie.svg";
 
 export {
   css,
@@ -46,4 +48,6 @@ export {
   jira,
   bitbucket,
   postgres,
+  rocket,
+  movie,
 };

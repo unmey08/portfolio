@@ -20,6 +20,8 @@ import {
   tailwindcss,
   chess,
   typescript,
+  rocket,
+  movie,
 } from "../assets/icons";
 
 export const skills = [
@@ -195,11 +197,20 @@ export const socialLinks = [
 
 export const projects = [
   {
+    iconUrl: rocket,
+    theme: "btn-back-blue",
+    name: "SpaceX Launches",
+    description:
+      "Developed a React application built using Vite that provides details about all SpaceX launch missions.",
+    githubLink: "https://github.com/unmey08/spacex-app",
+    link: "https://spacex-react-app-alpha.vercel.app/",
+  },
+  {
     iconUrl: estate,
     theme: "btn-back-red",
     name: "Propulse",
     description:
-      "Creating a property rental full-stack web application using Next.js, Tailwind and MongoDB",
+      "Created a property rental full-stack web application using Next.js, Tailwind and MongoDB",
     githubLink: "https://github.com/unmey08/propulse-property-finder",
     link: "https://propulse-property-finder.vercel.app/",
   },
@@ -211,6 +222,15 @@ export const projects = [
       "Developed a two-player Chess.com clone using NodeJS, ChessJS, Web sockets and EJS.",
     githubLink: "https://github.com/unmey08/chesscom-clone",
     link: "https://github.com/unmey08/chesscom-clone",
+  },
+  {
+    iconUrl: movie,
+    theme: "btn-back-pink",
+    name: "Movie Database",
+    description:
+      "Created a React application that contains all the movies in the TMDB Database.",
+    githubLink: "https://github.com/unmey08/movie-database-app",
+    link: "https://pink-gaur-558324.hostingersite.com/",
   },
 ];
 
