@@ -22,6 +22,7 @@ import {
   typescript,
   rocket,
   movie,
+  leaderboard,
 } from "../assets/icons";
 
 export const skills = [
@@ -198,30 +199,21 @@ export const socialLinks = [
 export const projects = [
   {
     iconUrl: rocket,
-    theme: "btn-back-blue",
+    theme: "btn-back-orange",
     name: "SpaceX Launches",
     description:
-      "Developed a React application built using Vite that provides details about all SpaceX launch missions.",
+      "Developed a React application with Vite that provides details about all SpaceX launch missions.",
     githubLink: "https://github.com/unmey08/spacex-app",
     link: "https://spacex-react-app-alpha.vercel.app/",
   },
   {
     iconUrl: estate,
-    theme: "btn-back-red",
+    theme: "btn-back-blue",
     name: "Propulse",
     description:
-      "Created a property rental full-stack web application using Next.js, Tailwind and MongoDB",
+      "Created a property rental full-stack web application using Next.js, Tailwind and MongoDB.",
     githubLink: "https://github.com/unmey08/propulse-property-finder",
     link: "https://propulse-property-finder.vercel.app/",
-  },
-  {
-    iconUrl: chess,
-    theme: "btn-back-green",
-    name: "Chess.com Clone",
-    description:
-      "Developed a two-player Chess.com clone using NodeJS, ChessJS, Web sockets and EJS.",
-    githubLink: "https://github.com/unmey08/chesscom-clone",
-    link: "https://github.com/unmey08/chesscom-clone",
   },
   {
     iconUrl: movie,
@@ -231,6 +223,24 @@ export const projects = [
       "Created a React application that contains all the movies in the TMDB Database.",
     githubLink: "https://github.com/unmey08/movie-database-app",
     link: "https://pink-gaur-558324.hostingersite.com/",
+  },
+  {
+    iconUrl: leaderboard,
+    theme: "btn-back-yellow",
+    name: "Leaderboard",
+    description:
+      "Built a dynamic leaderboard application leveraging the MERN stack and Tailwind.",
+    githubLink: "https://github.com/unmey08/leaderboard-app",
+    link: "https://leaderboard-app-mftq.onrender.com/",
+  },
+  {
+    iconUrl: chess,
+    theme: "btn-back-green",
+    name: "Chess.com Clone",
+    description:
+      "Developed a two-player Chess.com clone using NodeJS, ChessJS, Web sockets and EJS.",
+    githubLink: "https://github.com/unmey08/chesscom-clone",
+    link: "https://github.com/unmey08/chesscom-clone",
   },
 ];
 

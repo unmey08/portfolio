@@ -23,6 +23,7 @@ import bitbucket from "./bitbucket.svg";
 import postgres from "./postgresql-icon.svg";
 import rocket from "./rocket.svg";
 import movie from "./movie.svg";
+import leaderboard from "./leaderboard.svg";
 
 export {
   css,
@@ -50,4 +51,5 @@ export {
   postgres,
   rocket,
   movie,
+  leaderboard,
 };

@@ -80,9 +80,12 @@ const Projects = ({ theme }) => {
                     transition: { delay: 0.7, duration: 0.3, ease: "easeIn" },
                   }}
                 >
-                  <h4 className="text-2xl font-poppins font-semibold dark:text-blue-400">
-                    {project.name}
-                  </h4>
+                  <Link to={project.link} target="_blank">
+                    <h4 className="text-2xl font-poppins font-semibold dark:text-blue-400 hover:underline">
+                      {project.name}
+                    </h4>
+                  </Link>
+
                   <p className="mt-2 text-slate-500 dark:text-gray-200">
                     {project.description}
                   </p>
