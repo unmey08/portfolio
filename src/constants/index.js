@@ -132,8 +132,22 @@ export const skills = [
 
 export const experiences = [
   {
+    title: "Full-Stack Developer",
+    company_name: "ADP | Vancouver, BC (Canada · Remote)",
+    icon: adp,
+    iconBg: "#fbc3bc",
+    iconDarkBg: "#1e293bf2",
+    date: "July 2025 - June 2026",
+    points: [
+      "Built complex tax and compliance management UIs using React, Redux, and TypeScript for large-scale enterprise clients — including multi-entity account setup, tax jurisdiction configuration, and remittance workflows with province-specific validations.",
+      "Implemented Workers' Compensation employer classification across multiple Canadian jurisdictions — including class codes, premium rates, and jurisdiction-specific automated processing.",
+      "Won 'Most Impactful Product Feature' award for building an end-to-end GenAI pipeline (Amazon Q, MCP servers) that compressed a recurring multi-week delivery process to under 2 hours.",
+      "Leveraged AI-assisted development tools (Amazon Q, Claude, GitHub Copilot) across all initiatives to accelerate delivery by ~65%.",
+    ],
+  },
+  {
     title: "Senior Frontend Engineer",
-    company_name: "ADP | Pune, India",
+    company_name: "ADP | Pune (India)",
     icon: adp,
     iconBg: "#fbc3bc",
     iconDarkBg: "#1e293bf2",
@@ -149,7 +163,7 @@ export const experiences = [
   {
     title: "Senior Application Developer",
     company_name:
-      "AGM Tech Solutions - on Contract at ADP  | Parsippany, New Jersey",
+      "AGM Tech Solutions - on Contract at ADP | Parsippany, NJ (US)",
     icon: adp,
     iconBg: "#fbc3bc",
     iconDarkBg: "#1e293bf2",
@@ -163,7 +177,7 @@ export const experiences = [
   {
     title: "Application Developer",
     company_name:
-      "Egen Solutions - on Contract at ADP | Parsippany, New Jersey",
+      "Egen Solutions - on Contract at ADP | Parsippany, NJ (US)",
     icon: adp,
     iconBg: "#fbc3bc",
     iconDarkBg: "#1e293bf2",

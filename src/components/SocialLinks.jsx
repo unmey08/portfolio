@@ -7,16 +7,18 @@ const SocialLinks = ({ theme, page }) => {
     <div
       className={`${
         page === "Home" && window.innerWidth < 768
-          ? "flex flex-row text-3xl mt-8 space-x-5"
-          : "hidden md:fixed top-1/3 left-0 duration-400 dark:bg-slate-800/95 rounded-lg md:flex border-solid bg-blue-300/20 flex-col text-3xl py-10 px-2"
+          ? "flex flex-row text-4xl mt-8 space-x-6"
+          : "hidden md:fixed z-40 top-1/2 -translate-y-1/2 left-0 duration-400 rounded-r-lg md:flex border-solid bg-white/80 dark:bg-[#292524]/95 backdrop-blur-sm flex-col text-4xl py-6 px-3 gap-1 shadow-lg border border-stone-200 dark:border-stone-700"
       }`}
     >
       {socialLinks.map((item) => (
         <Link
           key={item.name}
           className={`${
-            theme === "dark" ? "text-white" : "text-black"
-          } mb-4 last:mb-0 ${item.className} transition ease-in`}
+            theme === "dark"
+              ? "text-white/80 hover:text-[#3b9eff]"
+              : "text-slate-700 hover:text-[#0055cc]"
+          } mb-3 last:mb-0 transition ease-in`}
           target="_blank"
           to={item.link}
           initial={{ opacity: 0 }}

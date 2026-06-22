@@ -18,7 +18,7 @@ const About = ({ theme }) => {
 
   return (
     <div>
-      <MetaTagComponent content="About Page of Unmey Mahaddalkar's website. Front-End Developer based in Vancouver, Canada with 5 years of experience building impactful web applications across borders using React, Redux, and JavaScript to create user-centric and efficient UIs." />
+      <MetaTagComponent content="About Page of Unmey Mahaddalkar's website. Full-Stack Developer based in Vancouver, Canada with 6 years of experience building impactful web applications using React, TypeScript, Next.js, Node.js and Redux." />
       <AnimatedPage>
         <section className="w-full h-full dark:h-full max-container">
           <h1 className="head-text dark:text-white">
@@ -27,6 +27,7 @@ const About = ({ theme }) => {
             </span>{" "}
             Me
           </h1>
+          <p className="text-slate-500 dark:text-gray-400 mt-1 text-sm">Full-Stack Engineer · Vancouver, BC</p>
           <motion.div
             className="mt-5 flex flex-col gap-3 text-slate-700 dark:text-gray-200"
             initial={{ opacity: 0 }}
@@ -36,10 +37,15 @@ const About = ({ theme }) => {
             }}
           >
             <p>
-              I'm a Front-End Engineer based in Vancouver, Canada with 5 years
-              of experience building impactful web applications across borders
-              in an Agile framework. Expertise in React, Redux, and JavaScript
-              to create user-centric and efficient UIs.
+              I'm a Full-Stack Engineer based in Vancouver, BC with ~6 years of
+              experience shipping production-grade web applications in Agile
+              teams across the US and India. I specialise in React, TypeScript,
+              Next.js, Node.js and Redux — building everything from AI-powered
+              chatbots to PDF annotation tools used by thousands of ADP
+              customers.
+            </p>
+            <p className="mt-2 text-green-700 dark:text-green-400 font-semibold text-sm">
+              🟢 Available July 1st · Canadian PR — no visa sponsorship needed
             </p>
           </motion.div>
           <div className="py-10 flex flex-col">
@@ -53,7 +59,7 @@ const About = ({ theme }) => {
             >
               My Skills
             </motion.h3>
-            <div className="mt-16 flex flex-wrap gap-12 justify-center md:justify-start">
+            <div className="mt-10 flex flex-wrap gap-6 sm:gap-10 justify-center md:justify-start">
               {skills.map((skill, index) => {
                 return (
                   <Tooltip
@@ -66,7 +72,7 @@ const About = ({ theme }) => {
                     className="bg-neutral-500 dark:bg-slate-700 px-3 py-1 shadow-xl shadow-black/10"
                   >
                     <motion.div
-                      className="block-container w-20 h-20"
+                      className="block-container w-14 h-14 sm:w-20 sm:h-20"
                       onMouseOver={() => handleMouseOver(skill)}
                       initial={{ opacity: 0 }}
                       animate={{

@@ -10,7 +10,7 @@ import MetaTagComponent from "../components/MetaTagComponent";
 const Projects = ({ theme }) => {
   return (
     <div>
-      <MetaTagComponent content="Projects of Unmey Mahaddalkar's website. Front-End Developer based in Vancouver, Canada with 5 years of experience building impactful web applications across borders using React, Redux, and JavaScript to create user-centric and efficient UIs." />
+      <MetaTagComponent content="Projects of Unmey Mahaddalkar's website. Full-Stack Developer based in Vancouver, Canada with 6 years of experience building web applications using React, TypeScript, Next.js, Node.js and Redux." />
       <AnimatedPage>
         <section className="max-container md:h-screen dark:md:h-screen sm:h-[100vh] dark:sm:h-[100vh]">
           <motion.h1
@@ -47,9 +47,9 @@ const Projects = ({ theme }) => {
             profile. Feel free to explore the codebase!
           </motion.p>
 
-          <div className="flex flex-wrap my-20 gap-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 my-20 gap-10">
             {projects.map((project) => (
-              <div className="lg:w-[400px] w-full" key={project.name}>
+              <div className="w-full" key={project.name}>
                 <motion.div
                   className="block-container w-12 h-12"
                   initial={{ opacity: 0 }}

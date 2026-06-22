@@ -1,33 +1,43 @@
-import {useEffect, useState} from 'react';
-import {motion} from 'framer-motion';
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { smoothScrollTo } from "../utils/smoothScroll";
 
 const ScrollToTopButton = () => {
-    const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
+  const [show, setShow] = useState(false);
 
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 500) {
-                setShowScrollToTopButton(true)
-            }
-            else {
-                setShowScrollToTopButton(false);
-            }
-        })
-    }, [])
-    return (
-        <>
-        {
-            showScrollToTopButton && 
-            <motion.button className="fixed bottom-2 right-10 rounded-lg dark:bg-slate-800/95 p-3 bg-blue-300/20 text-black dark:text-white dark:hover:bg-slate-700 hover:bg-blue-400 hover:shadow-lg active:shadow-lg text-2xl"
-            id="btn-back-to-top" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} 
-            whileHover={{ scale: 1.1 }} transition={{ type: "spring", stiffness: 400, damping: 10}}
-            >
-                <ion-icon name="arrow-up-outline" />
-            </motion.button>
-        }
-        </>
-            
-    )
-}
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > 500);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-export default ScrollToTopButton
+  return (
+    <AnimatePresence>
+      {show && (
+        <motion.button
+          key="scroll-top"
+          aria-label="Scroll to top"
+          onClick={() => smoothScrollTo(0, 900)}
+          initial={{ opacity: 0, scale: 0.6, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.6, y: 20 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.92 }}
+          transition={{ type: "spring", stiffness: 400, damping: 18 }}
+          className="fixed bottom-8 right-8 z-30 w-12 h-12 flex items-center justify-center rounded-full
+            border border-stone-200 dark:border-stone-700
+            bg-white/80 dark:bg-[#292524]/90 backdrop-blur-md
+            text-[#0055cc] dark:text-[#3b9eff] text-xl shadow-lg
+            hover:bg-[#0055cc] hover:text-white hover:border-transparent
+            dark:hover:bg-[#3b9eff] dark:hover:text-[#1c1917]
+            transition-colors duration-300"
+        >
+          <ion-icon name="arrow-up-outline" />
+        </motion.button>
+      )}
+    </AnimatePresence>
+  );
+};
+
+export default ScrollToTopButton;

@@ -3,7 +3,7 @@ import pdfFile from "../assets/resume/UnmeyMahaddalkarResume.pdf";
 import { Link } from "react-router-dom";
 import AnimatedPage from "../components/AnimatedPage";
 import { motion } from "framer-motion";
-import { Particle, SocialLinks } from "../components";
+import { SocialLinks } from "../components";
 import MetaTagComponent from "../components/MetaTagComponent";
 
 const Home = ({ theme }) => {
@@ -11,9 +11,9 @@ const Home = ({ theme }) => {
     <div>
       <MetaTagComponent content="Home Page of Unmey Mahaddalkar's website. Frontend Developer | Crafting Exceptional User Experiences with React, Next.js, TypeScript & JavaScript | Remote-Ready Innovator Driving Impactful Digital Solutions" />
       <AnimatedPage>
-        <Particle />
-        <section className="relative flex md:flex-row flex-col max-container w-full h-screen dark:h-screen items-center justify-center content-center">
-          <div className="min-w-[50%] flex flex-col md:mt-0 text-left">
+
+        <section className="relative flex w-full min-h-screen items-center justify-center px-8 sm:px-16">
+          <div className="flex flex-col text-center items-center max-w-2xl w-full">
             <motion.h1
               className="head-text dark:text-white"
               initial={{ opacity: 0, y: "-10vh" }}
@@ -41,16 +41,19 @@ const Home = ({ theme }) => {
               }}
             >
               <p className="text-3xl blue-gradient_text font-bold">
-                Front-End Engineer
+                Full-Stack Engineer
               </p>
               <p
-                className={`text-lg text-gray-600 dark:text-white/80 space-x-14 md:font-semibold sm:font-normal`}
+                className={`text-lg text-gray-600 dark:text-white/80 md:font-semibold sm:font-normal`}
               >
-                I transform design concepts into interactive web experiences.
+                React · TypeScript · Next.js · Node.js · Vancouver, BC
+              </p>
+              <p className="text-sm text-green-700 dark:text-green-400 font-semibold">
+                🟢 Available July 1st · Canadian PR — no sponsorship needed
               </p>
             </motion.div>
             <motion.div
-              className="md:flex md:mt-8 mt-8 flex-row hidden"
+              className="flex mt-8 flex-row justify-center"
               initial={{ opacity: 0, y: "10vh" }}
               animate={{
                 opacity: 1,

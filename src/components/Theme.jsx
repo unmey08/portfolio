@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Theme = ({ theme, setTheme }) => {
   return (
     <div
-      className={`hidden md:fixed md:flex  md:flex-col xl:flex-row dark:bg-slate-800/95 rounded-lg border-solid bg-blue-300/20 ${
+      className={`hidden md:fixed z-40 md:flex  md:flex-col xl:flex-row dark:bg-[#292524]/95 rounded-lg border border-stone-200 dark:border-stone-700 border-solid bg-white/80 backdrop-blur-sm ${
         window.innerWidth > 1280 ? "right-10 top-2" : "left-0 bottom-2"
       }`}
     >
@@ -22,10 +22,14 @@ const Theme = ({ theme, setTheme }) => {
           <motion.button
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className={`w-8 h-8 leading-9 text-xl rounded-full m-1 dark:text-white ${
-              themeOption.text === "dark"
-                ? "hover:text-blue-600 active:text-blue-600"
-                : "hover:text-yellow-500 focus:text-yellow-500"
+            className={`w-8 h-8 leading-9 text-xl rounded-full m-1 dark:text-white transition-colors ${
+              themeOption.text === "light"
+                ? theme === "light"
+                  ? "text-yellow-500"
+                  : "hover:text-yellow-500"
+                : theme === "dark"
+                ? "text-[#3b9eff]"
+                : "hover:text-[#3b9eff]"
             } `}
             onClick={() => setTheme(themeOption.text)}
             aria-label={themeOption.uiText}
