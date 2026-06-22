@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import pdfFile from "../assets/resume/UnmeyMahaddalkarResume.pdf";
 import { socialLinks } from "../constants";
 import { AnimatePresence, motion } from "framer-motion";
+import { Tooltip } from "@material-tailwind/react";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -55,17 +56,33 @@ const Navbar = ({ theme, setTheme }) => {
     open: { transition: { staggerChildren: 0.09, delayChildren: 0.3, staggerDirection: 1 } },
   };
 
-  const ThemeToggle = ({ className = "" }) => (
-    <button
-      onClick={toggleTheme}
-      aria-label="Toggle theme"
-      className={`text-2xl transition-colors ${
-        theme === "dark" ? "text-white hover:text-[#3b9eff]" : "text-black hover:text-yellow-500"
-      } ${className}`}
-    >
-      <ion-icon name={theme === "dark" ? "moon-outline" : "sunny-outline"}></ion-icon>
-    </button>
-  );
+  const ThemeToggle = ({ className = "", showTooltip = false }) => {
+    const goingDark = theme !== "dark";
+    const label = goingDark ? "Switch to dark mode" : "Switch to light mode";
+    const button = (
+      <button
+        onClick={toggleTheme}
+        aria-label={label}
+        className={`text-2xl transition-colors ${
+          theme === "dark" ? "text-white hover:text-yellow-500" : "text-black hover:text-[#3b9eff]"
+        } ${className}`}
+      >
+        <ion-icon name={goingDark ? "moon-outline" : "sunny-outline"}></ion-icon>
+      </button>
+    );
+
+    if (!showTooltip) return button;
+
+    return (
+      <Tooltip
+        content={label}
+        className="bg-neutral-500 dark:bg-slate-700 px-3 py-1 shadow-xl shadow-black/10"
+        animate={{ mount: { scale: 1, y: 0 }, unmount: { scale: 0, y: 25 } }}
+      >
+        {button}
+      </Tooltip>
+    );
+  };
 
   return (
     <div>
@@ -120,7 +137,7 @@ const Navbar = ({ theme, setTheme }) => {
               );
             })}
             <span className="w-px h-5 bg-stone-300 dark:bg-stone-600" />
-            <ThemeToggle />
+            <ThemeToggle showTooltip />
           </nav>
 
           <div

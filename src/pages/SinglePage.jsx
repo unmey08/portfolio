@@ -122,7 +122,6 @@ const SinglePage = ({ theme }) => {
                 phrases={[
                   "Full-Stack Engineer",
                   "React Developer",
-                  "TypeScript Enthusiast",
                   "UI Engineer",
                 ]}
               />
@@ -199,7 +198,7 @@ const SinglePage = ({ theme }) => {
 
       {/* ── ABOUT ── */}
       <section id="about" className="max-w-5xl mx-auto px-6 sm:px-16 py-24">
-        <motion.h1
+        <motion.h2
           className="head-text dark:text-white"
           variants={fadeUp}
           initial="hidden"
@@ -207,7 +206,7 @@ const SinglePage = ({ theme }) => {
           viewport={{ once: true }}
         >
           <span className="blue-gradient_text drop-shadow font-semibold">About</span> Me
-        </motion.h1>
+        </motion.h2>
         <p className="text-slate-500 dark:text-gray-400 mt-1 text-sm">Full-Stack Engineer · Vancouver, BC</p>
 
         <motion.div
@@ -342,7 +341,7 @@ const SinglePage = ({ theme }) => {
 
       {/* ── PROJECTS ── */}
       <section id="projects" className="max-w-5xl mx-auto px-6 sm:px-16 py-24">
-        <motion.h1
+        <motion.h2
           className="head-text dark:text-white"
           variants={fadeUp}
           initial="hidden"
@@ -350,7 +349,7 @@ const SinglePage = ({ theme }) => {
           viewport={{ once: true }}
         >
           My <span className="blue-gradient_text drop-shadow font-semibold">Projects</span>
-        </motion.h1>
+        </motion.h2>
         <motion.p
           className="text-slate-500 mt-2 leading-relaxed dark:text-gray-200"
           variants={fadeUp}
@@ -417,7 +416,7 @@ const SinglePage = ({ theme }) => {
       {/* ── CONTACT ── */}
       <section id="contact" className="max-w-5xl mx-auto px-6 sm:px-16 py-24 relative flex flex-col items-center">
         {alert.show && <Alert {...alert} />}
-        <motion.h1
+        <motion.h2
           className="head-text dark:text-white text-center"
           variants={fadeUp}
           initial="hidden"
@@ -425,7 +424,7 @@ const SinglePage = ({ theme }) => {
           viewport={{ once: true }}
         >
           Get in <span className="blue-gradient_text font-semibold">Touch</span>
-        </motion.h1>
+        </motion.h2>
 
         <motion.form
           ref={formRef}
