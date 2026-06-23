@@ -9,6 +9,7 @@ const HomeFooter = () => {
           key={item.name}
           className={`mr-4 hover:text-neutral-600`}
           target="_blank"
+          rel="noopener noreferrer"
           to={item.link}
           aria-label={item.name}
         >

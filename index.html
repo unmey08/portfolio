@@ -53,6 +53,93 @@
     </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <div id="app-loader">
+      <style>
+        #app-loader {
+          position: fixed;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 2rem;
+          background: #faf8f5;
+          z-index: 9999;
+          transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        #app-loader.dark {
+          background: #1c1917;
+        }
+        #app-loader.hidden {
+          opacity: 0;
+          visibility: hidden;
+        }
+        .loader-logo {
+          font-family: monospace;
+          font-size: 2rem;
+          font-weight: 700;
+          letter-spacing: -0.02em;
+          animation: loader-pulse 1.6s ease-in-out infinite;
+        }
+        .loader-logo .bracket {
+          color: #9ca3af;
+        }
+        #app-loader.dark .loader-logo .bracket {
+          color: #6b7280;
+        }
+        .loader-logo .text {
+          background: linear-gradient(90deg, #0086e6, #0055cc);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          padding: 0 2px;
+        }
+        .loader-bar-track {
+          width: 120px;
+          height: 2px;
+          background: #e7e5e4;
+          border-radius: 9999px;
+          overflow: hidden;
+        }
+        #app-loader.dark .loader-bar-track {
+          background: #44403c;
+        }
+        .loader-bar-fill {
+          height: 100%;
+          background: linear-gradient(90deg, #0086e6, #0055cc);
+          border-radius: 9999px;
+          animation: loader-bar 1.6s ease-in-out infinite;
+        }
+        @keyframes loader-pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
+        }
+        @keyframes loader-bar {
+          0% { width: 0%; margin-left: 0%; }
+          50% { width: 70%; margin-left: 15%; }
+          100% { width: 0%; margin-left: 100%; }
+        }
+      </style>
+      <div class="loader-logo">
+        <span class="bracket">&lt;</span><span class="text">UM</span><span class="bracket">/&gt;</span>
+      </div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.getElementById("app-loader").classList.add("dark");
+        }
+      })();
+    </script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script

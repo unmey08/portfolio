@@ -20,6 +20,7 @@ const SocialLinks = ({ theme, page }) => {
               : "text-slate-700 hover:text-[#0055cc]"
           } mb-3 last:mb-0 transition ease-in`}
           target="_blank"
+          rel="noopener noreferrer"
           to={item.link}
           initial={{ opacity: 0 }}
           animate={{
@@ -32,7 +33,7 @@ const SocialLinks = ({ theme, page }) => {
             whileHover={{ scale: 1.2 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <ion-icon name={item.iconUrl}></ion-icon>
+            <ion-icon name={item.iconUrl} aria-hidden="true"></ion-icon>
           </motion.div>
         </Link>
       ))}

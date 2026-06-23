@@ -26,108 +26,21 @@ import {
 } from "../assets/icons";
 
 export const skills = [
-  {
-    imageUrl: bitbucket,
-    name: "Bitbucket",
-    type: "Version Control",
-    hover: false,
-  },
-  {
-    imageUrl: css,
-    name: "CSS",
-    type: "Frontend",
-    hover: false,
-  },
-  {
-    imageUrl: express,
-    name: "Express",
-    type: "Backend",
-    hover: false,
-  },
-  {
-    imageUrl: git,
-    name: "Git",
-    type: "Version Control",
-    hover: false,
-  },
-  {
-    imageUrl: github,
-    name: "GitHub",
-    type: "Version Control",
-    hover: false,
-  },
-  {
-    imageUrl: html,
-    name: "HTML",
-    type: "Frontend",
-    hover: false,
-  },
-  {
-    imageUrl: javascript,
-    name: "JavaScript",
-    type: "Frontend",
-    hover: false,
-  },
-  {
-    imageUrl: jira,
-    name: "Jira",
-    type: "Agile",
-    hover: false,
-  },
-  {
-    imageUrl: mongodb,
-    name: "MongoDB",
-    type: "Database",
-    hover: false,
-  },
-  {
-    imageUrl: nextjs,
-    name: "Next.js",
-    type: "Frontend",
-    hover: false,
-  },
-  {
-    imageUrl: nodejs,
-    name: "Node.js",
-    type: "Backend",
-    hover: false,
-  },
-  {
-    imageUrl: postgres,
-    name: "PostgreSQL",
-    type: "Backend",
-    hover: false,
-  },
-  {
-    imageUrl: react,
-    name: "React",
-    type: "Frontend",
-    hover: false,
-  },
-  {
-    imageUrl: redux,
-    name: "Redux",
-    type: "State Management",
-    hover: false,
-  },
-  {
-    imageUrl: sass,
-    name: "Sass",
-    type: "Frontend",
-    hover: false,
-  },
-  {
-    imageUrl: tailwindcss,
-    name: "Tailwind CSS",
-    type: "Frontend",
-    hover: false,
-  },
-  {
-    imageUrl: typescript,
-    name: "TypeScript",
-    type: "Frontend",
-    hover: false,
-  },
+  // Frontend
+  { imageUrl: javascript, name: "JavaScript", group: "Frontend" },
+  { imageUrl: typescript, name: "TypeScript", group: "Frontend" },
+  { imageUrl: react, name: "React", group: "Frontend" },
+  { imageUrl: nextjs, name: "Next.js", group: "Frontend" },
+  { imageUrl: redux, name: "Redux", group: "Frontend" },
+  { imageUrl: tailwindcss, name: "Tailwind CSS", group: "Frontend" },
+  // Backend
+  { imageUrl: nodejs, name: "Node.js", group: "Backend" },
+  { imageUrl: express, name: "Express", group: "Backend" },
+  { imageUrl: postgres, name: "PostgreSQL", group: "Backend" },
+  { imageUrl: mongodb, name: "MongoDB", group: "Backend" },
+  // Tools
+  { imageUrl: git, name: "Git", group: "Tools" },
+  { imageUrl: github, name: "GitHub", group: "Tools" },
 ];
 
 export const experiences = [
@@ -139,10 +52,9 @@ export const experiences = [
     iconDarkBg: "#1e293bf2",
     date: "July 2025 - June 2026",
     points: [
-      "Built complex tax and compliance management UIs using React, Redux, and TypeScript for large-scale enterprise clients — including multi-entity account setup, tax jurisdiction configuration, and remittance workflows with province-specific validations.",
-      "Implemented Workers' Compensation employer classification across multiple Canadian jurisdictions — including class codes, premium rates, and jurisdiction-specific automated processing.",
-      "Won 'Most Impactful Product Feature' award for building an end-to-end GenAI pipeline (Amazon Q, MCP servers) that compressed a recurring multi-week delivery process to under 2 hours.",
-      "Leveraged AI-assisted development tools (Amazon Q, Claude, GitHub Copilot) across all initiatives to accelerate delivery by ~65%.",
+      "🏆 Won 'Most Impactful Product Feature' award for building an end-to-end GenAI pipeline (Amazon Q, MCP servers) that compressed a recurring multi-week delivery process to under 2 hours.",
+      "Built complex tax and compliance management UIs using React, Redux, and TypeScript for large-scale enterprise clients — including multi-entity account setup, tax jurisdiction configuration, and remittance workflows.",
+      "Adopted ADP's AI-powered SDLC pipeline (GitHub Copilot, Amazon Q), automating story analysis, code generation, and PR creation from Jira tickets through QA verification, meaningfully compressing feature delivery cycle time.",
     ],
   },
   {
@@ -153,32 +65,28 @@ export const experiences = [
     iconDarkBg: "#1e293bf2",
     date: "March 2022 - August 2024",
     points: [
-      "Integrated Benefits Assist MFE chatbot leveraging LLM to deliver intelligent and personalized responses to employee inquiries.",
-      "Spearheaded the frontend development integration of Gen AI models into the Plan Setup page.",
-      "Overhauled the user experience of the Launchpad web application by implementing a custom design system built with ReactJS, Redux, and TypeScript.",
-      "Collaborated closely with the Product Managers and UX Designers to continuously introduce new features and ensure the application’s evolution aligns with changing user needs",
-      "Initiated automated daily regression testing using Java and Selenium, reducing testing time by 30% and improving code.",
+      "Overhauled the Launchpad web app UX by implementing a custom design system in React, Redux, and TypeScript — adopted across multiple product teams.",
+      "Integrated a GenAI-powered Benefits chatbot (LLM) delivering personalised responses to thousands of employee inquiries.",
+      "Cut regression testing time by 30% by introducing Selenium automation, freeing the team for feature work.",
     ],
   },
   {
     title: "Senior Application Developer",
     company_name:
       "AGM Tech Solutions - on Contract at ADP | Parsippany, NJ (US)",
-    icon: adp,
+    icon: agm,
     iconBg: "#fbc3bc",
     iconDarkBg: "#1e293bf2",
     date: "July 2020 - February 2022",
     points: [
-      "Architected a data extraction & auto-population solution for Benefits documents with custom insights & a PDF viewer for highlighting source data",
-      "Mentored a 3-person frontend team using React JS, Redux, and TypeScript to digitize Plan Summary pages, enabling automated Summary of Benefits & Coverage document processing",
-      "Engineered a React JS and Redux PDF annotation tool for 20 consultants, streamlining data extraction from 1600+ insurance documents, and improving machine learning model training accuracy to 93%.",
+      "Engineered a PDF annotation tool in React & Redux used by 20 consultants to process 1600+ insurance documents — improved ML model accuracy to 93%.",
+      "Mentored a 3-person team to digitise Plan Summary pages, enabling automated Benefits & Coverage document processing.",
     ],
   },
   {
     title: "Application Developer",
-    company_name:
-      "Egen Solutions - on Contract at ADP | Parsippany, NJ (US)",
-    icon: adp,
+    company_name: "Egen Solutions - on Contract at ADP | Parsippany, NJ (US)",
+    icon: egen,
     iconBg: "#fbc3bc",
     iconDarkBg: "#1e293bf2",
     date: "January 2020 - June 2020",
@@ -216,7 +124,8 @@ export const projects = [
     theme: "btn-back-orange",
     name: "SpaceX Launches",
     description:
-      "Developed a React application with Vite that provides details about all SpaceX launch missions.",
+      "React app fetching and displaying all SpaceX launch missions with filtering and mission details.",
+    tech: "React 19 · TypeScript · Vite · Tailwind CSS · React Router",
     githubLink: "https://github.com/unmey08/spacex-app",
     link: "https://spacex-react-app-alpha.vercel.app/",
   },
@@ -225,7 +134,8 @@ export const projects = [
     theme: "btn-back-blue",
     name: "Propulse",
     description:
-      "Created a property rental full-stack web application using Next.js, Tailwind and MongoDB.",
+      "Full-stack property rental platform with listings, search, and user authentication.",
+    tech: "Next.js 14 · TypeScript · Tailwind CSS · MongoDB · Mongoose",
     githubLink: "https://github.com/unmey08/propulse-property-finder",
     link: "https://propulse-property-finder.vercel.app/",
   },
@@ -234,7 +144,8 @@ export const projects = [
     theme: "btn-back-pink",
     name: "Movie Database",
     description:
-      "Created a React application that contains all the movies in the TMDB Database.",
+      "Browse and search millions of movies powered by the TMDB API with real-time Appwrite-backed state.",
+    tech: "React 19 · Vite · Tailwind CSS · Appwrite",
     githubLink: "https://github.com/unmey08/movie-database-app",
     link: "https://pink-gaur-558324.hostingersite.com/",
   },
@@ -243,7 +154,8 @@ export const projects = [
     theme: "btn-back-yellow",
     name: "Leaderboard",
     description:
-      "Built a dynamic leaderboard application leveraging the MERN stack and Tailwind.",
+      "Dynamic leaderboard with add, update, delete, sorting, filtering, pagination, and confetti rewards.",
+    tech: "React 19 · Node.js · Express · MongoDB · Tailwind CSS",
     githubLink: "https://github.com/unmey08/leaderboard-app",
     link: "https://leaderboard-app-mftq.onrender.com/",
   },
@@ -252,7 +164,8 @@ export const projects = [
     theme: "btn-back-green",
     name: "Chess.com Clone",
     description:
-      "Developed a two-player Chess.com clone using NodeJS, ChessJS, Web sockets and EJS.",
+      "Real-time two-player chess game with move validation, turn management, and live sync via WebSockets.",
+    tech: "Node.js · Express · Socket.io · Chess.js · EJS",
     githubLink: "https://github.com/unmey08/chesscom-clone",
     link: "https://github.com/unmey08/chesscom-clone",
   },
