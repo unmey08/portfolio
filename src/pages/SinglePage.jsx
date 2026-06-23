@@ -85,7 +85,7 @@ const SinglePage = ({ theme }) => {
 
   return (
     <div>
-      <MetaTagComponent content="Unmey Mahaddalkar — Full-Stack Engineer based in Vancouver, BC. React, TypeScript, Next.js, Node.js. Canadian PR, available July 1st." />
+      <MetaTagComponent content="Unmey Mahaddalkar — Frontend-Focused Full-Stack Engineer based in Vancouver, BC. 6+ years with React, TypeScript, Redux, Next.js, Node.js. Canadian PR, available July 1st, 2026." />
 
       {/* ── HERO ── */}
       <section
